@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/20 16:12:30 by droly             #+#    #+#             */
-/*   Updated: 2017/03/07 17:13:32 by droly            ###   ########.fr       */
+/*   Updated: 2017/03/08 17:36:58 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ t_list		*split_mem(size_t size, t_list *list)
 
 void	*add_new(t_list *list, t_list *tmp2, size_t size)
 {
-	void *tmp;
+	t_list *tmp;
 	tmp2 = list;
 	printf("\nyo\n");
 //	check_free()
@@ -40,8 +40,22 @@ void	*add_new(t_list *list, t_list *tmp2, size_t size)
 		printf("\nyo2\n");
 		if (list->isfree == 0 && list->size >= (size + sizeof(t_list)) && list->next != NULL)
 		{
-			tmp = &list->start[size];
-//			laisser size dans list actuel puis regarder si le morceau resatnt contient sufisament pour reallouer une autre fois, et verifier sir elle a au minimun sizeof(t_list) + 1
+			if (size + sizeof(t_list) + 1 >= list->size)
+			{
+				list->isfree = 1;
+				return (list->start);
+			}
+			else
+			{
+				tmp = &list->start[size + 1];
+				tmp->isfree = 0;
+				tmp->next = list->next;
+				tmp->start = &tmp[sizeof(t_list) + 1];
+				tmp->size = list->size - (sizeof(t_list) + size);
+				list->size = size;
+				tmp = &list->start[size + 1];
+				list->next = tmp;
+			}
 		}
 		else if (list->isfree == 0 && list->size >= (size + sizeof(t_list)))
 		{
