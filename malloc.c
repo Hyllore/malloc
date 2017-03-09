@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/20 16:12:30 by droly             #+#    #+#             */
-/*   Updated: 2017/03/08 17:36:58 by droly            ###   ########.fr       */
+/*   Updated: 2017/03/09 17:27:03 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,21 @@ void	*add_new(t_list *list, t_list *tmp2, size_t size)
 	return (NULL);
 }
 
+int		check_free(t_list *list, size_t size, t_list *tmp2)
+{
+	while (list != NULL)
+	{
+		if (list->isfree == 0 && list->size >= (size + sizeof(t_list)) && list->next != NULL)
+		{
+			list = tmp2;
+			return (1);
+		}
+		list = list->next;
+	}
+	list = tmp2;
+	return (0);
+}
+
 t_list	*begin_new(t_list *list, int num,  size_t size)
 {
 	void *tmp;
@@ -93,6 +108,15 @@ t_list	*begin_new(t_list *list, int num,  size_t size)
 	return (list);
 }
 
+t_list	*check_size(t_list *list, size_t size)
+{
+	if ((size + sizeof(t_list)) <= (2 * getpagesize()))
+		list = begin_new(list, 2, size);
+	if ((size + sizeof(t_list)) <= (16 * getpagesize()) && size >= (2 * getpagesize()))
+		list = begin_new(list, 16, size);
+	return (list);
+}
+
 void	*ft_malloc(size_t size)
 {
 	void *tmp;
@@ -101,28 +125,17 @@ void	*ft_malloc(size_t size)
 	printf("\nsizeof t list  %lu\n", (sizeof(t_list)));
 	if (list)
 		return (add_new(list, tmp2, size));
+	else if (list && check_free(list, size, tmp2) == 0)
+	{
+		//trouver un moyen de recuperer la nouvelle liste et de gerere le cas > 16 * getpagesize pour mettre a la suite de la liste deja existante
+		tmp2 = check_size(tmp2, size);
+		tmp2 = list;
+	}
 	else
 	{
-		if ((size + sizeof(t_list)) <= (2 * getpagesize()))
-		{
-			list = begin_new(list, 2, size);
-			tmp2 = list;
-		}
-		if ((size + sizeof(t_list)) <= (16 * getpagesize()) && size >= (2 * getpagesize()))
-		{
-//			printf("\nhey\n");
-//			tmp = mmap(0, (16 * getpagesize()), PROT_READ | PROT_WRITE, MAP_ANON | MAP_PRIVATE, -1, 0);
-//			list = &tmp[0];
-//			tmp2 = list;
-//			printf("sizet_listjve%lu\n", sizeof(t_list));
-//			list->start = &tmp[sizeof(t_list) + 1];
-//			printf("tmp %p\n", &tmp[sizeof(t_list)]);
-//			list = split_mem(size, list);
-//			list->next->size = ((16 * getpagesize()) - (size + sizeof(t_list)));
-			list = begin_new(list, 16, size);
-			tmp2 = list;
-		}
-		else
+		list = check_size(list, size);
+		tmp2 = list;
+		if ((size + sizeof(t_list)) > (16 * getpagesize()))
 			return (mmap(0, size, PROT_READ | PROT_WRITE, MAP_ANON | MAP_PRIVATE, -1, 0));
 	}
 	list = tmp2;
@@ -136,13 +149,14 @@ int main(void)
 
 	i = 0;
 	printf("\nlu %lu\n", (sizeof(t_list)));
-	*str = ft_malloc(sizeof(int) * 8);
+//	if ((*str = ft_malloc(sizeof(int) * 8)) == NULL)
+//		printf("\nnull\n");
 	printf("\nlu %lu\n", (sizeof(t_list)));
 	printf("ext %p\n", *str);
-	*str = ft_malloc(sizeof(int) * 8);
-	*str = ft_malloc(sizeof(int) * 25);
-	*str = ft_malloc(sizeof(int) * 100);
-	*str = ft_malloc(sizeof(int) * 1000);
+//	*str = ft_malloc(sizeof(int) * 8);
+//	*str = ft_malloc(sizeof(int) * 25);
+//	*str = ft_malloc(sizeof(int) * 100);
+	*str = ft_malloc(sizeof(int) * 10000);
 	while (list != NULL)
 	{
 		printf("\nadresse %p\n", list);
@@ -159,6 +173,18 @@ int main(void)
 		printf("size %d\n", list->size);
 		list = list->next;
 	}
-		printf("\nsize get page %d\n", 2 * getpagesize());
-
+	printf("\nsize get page 16 %d\n", 16 * getpagesize());
+	printf("\nsize get page 2 %d\n", 2 * getpagesize());
 }
+
+
+//			printf("\nhey\n");
+//			tmp = mmap(0, (16 * getpagesize()), PROT_READ | PROT_WRITE, MAP_ANON | MAP_PRIVATE, -1, 0);
+//			list = &tmp[0];
+//			tmp2 = list;
+//			printf("sizet_listjve%lu\n", sizeof(t_list));
+//			list->start = &tmp[sizeof(t_list) + 1];
+//			printf("tmp %p\n", &tmp[sizeof(t_list)]);
+//			list = split_mem(size, list);
+//			list->next->size = ((16 * getpagesize()) - (size + sizeof(t_list)));
+
