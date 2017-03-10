@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/28 10:41:08 by droly             #+#    #+#             */
-/*   Updated: 2017/03/09 17:27:06 by droly            ###   ########.fr       */
+/*   Updated: 2017/03/10 17:41:40 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ typedef struct		s_list
 {
 	int				size;
 	int				isfree;
+	int				floor;
+	int				type;
 	void			*start;
 	struct s_list	*next;
 }					t_list;
