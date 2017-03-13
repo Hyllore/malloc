@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/20 16:12:30 by droly             #+#    #+#             */
-/*   Updated: 2017/03/10 17:41:38 by droly            ###   ########.fr       */
+/*   Updated: 2017/03/13 17:23:31 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_list *list;
 
-t_list		*split_mem(size_t size, t_list *list)
+t_list		*split_mem(size_t size, t_list *list, int num)
 {
 	int i;
 
@@ -22,10 +22,13 @@ t_list		*split_mem(size_t size, t_list *list)
 	list->size = size;
 	list->isfree = 1;
 	printf("list %p\n", list->start);
-	list->next = &list->start[size + 1];
-	list->next->isfree = 0;
-	list->next->start = &list->start[size + sizeof(t_list) + 1];
-	list->next->next = NULL;
+	if (num <= 16)
+	{
+		list->next = &list->start[size + 1];
+		list->next->isfree = 0;
+		list->next->start = &list->start[size + sizeof(t_list) + 1];
+		list->next->next = NULL;
+	}
 	return (list);
 }
 
@@ -35,9 +38,17 @@ void	*add_new(t_list *list, t_list *tmp2, size_t size)
 	tmp2 = list;
 	printf("\nyo\n");
 //	check_free()
+	if (size == 400)
+		printf("\nbjrlepd\n");
 	while (list != NULL)
 	{
 		printf("\nyo2\n");
+//		printf("\nadresse %p\n", list);
+//		printf("\nlist sortie %p\n", list->start);
+//		printf("\nlist free %d\n", list->isfree);
+//		printf("type %d\n", list->type);
+//		printf("floor %d\n", list->floor);
+//		printf("size %d\n", list->size);
 		if (list->isfree == 0 && list->size >= (size + sizeof(t_list)) && list->next != NULL)
 		{
 //			if (size + sizeof(t_list) + 1 >= list->size)
@@ -47,7 +58,9 @@ void	*add_new(t_list *list, t_list *tmp2, size_t size)
 //			}
 //			else
 //			{
+				printf("\nyo3\n");
 				tmp = &list->start[size + 1];
+				list->isfree = 1;
 				tmp->isfree = 0;
 				tmp->next = list->next;
 				tmp->start = &tmp[sizeof(t_list) + 1];
@@ -57,6 +70,9 @@ void	*add_new(t_list *list, t_list *tmp2, size_t size)
 				list->size = size;
 				tmp = &list->start[size + 1];
 				list->next = tmp;
+					if (size == 400)
+						printf("\nbjrlepd %d\n", list->isfree);
+				return (list->start);
 //			}
 		}
 		else if (list->isfree == 0 && list->size >= (size + sizeof(t_list)))
@@ -103,17 +119,24 @@ t_list	*begin_new(t_list *list, int num,  size_t size, int type)
 
 	tmp = NULL;
 	printf("\nhey\n");
-	tmp = mmap(0, (num * getpagesize()), PROT_READ | PROT_WRITE, MAP_ANON | MAP_PRIVATE, -1, 0);
+	if((tmp = mmap(0, (num * getpagesize()), PROT_READ | PROT_WRITE, MAP_ANON | MAP_PRIVATE, -1, 0)) == -1)
+	{
+		printf("\nerror\n");
+		return (NULL);
+	}
 	list = &tmp[0];
 	printf("sizet_listjve%lu\n", sizeof(t_list));
 	list->start = &tmp[sizeof(t_list) + 1];
 	printf("tmp %p\n", &tmp[sizeof(t_list)]);
-	list = split_mem(size, list);
-	list->next->size = ((num * getpagesize()) - (size + sizeof(t_list)));
+	list = split_mem(size, list, num);
 	list->floor = i;
 	list->type = type;
-	list->next->floor = i;
-	list->next->type = type;
+	if (num <= 16)
+	{
+		list->next->size = ((num * getpagesize()) - (size + sizeof(t_list)));
+		list->next->floor = i;
+		list->next->type = type;
+	}
 	i++;
 	return (list);
 }
@@ -133,21 +156,24 @@ void	*ft_malloc(size_t size)
 {
 	void *tmp;
 	t_list *tmp2;
+	t_list *tmp3;
 
 	printf("\nsizeof t list  %lu\n", (sizeof(t_list)));
-	if (list)
-		return (add_new(list, tmp2, size));
-	else if (list && check_free(list, size, tmp2) == 0)
+	if (list && check_free(list, size, tmp2) == 0)
 	{
+		tmp3 = list;
 		//trouver un moyen de recuperer la nouvelle liste et de gerer le cas > 16 * getpagesize pour mettre a la suite de la liste deja existante
 		//trouver pourquoi ca fait pas ce que c cense faire en dessous
+		printf("\ntest\n");
 		tmp2 = check_size(tmp2, size);
 		while (list->next != NULL)
 			list = list->next;
 		if (list->next == NULL)
 			list->next = tmp2;
-		tmp2 = list;
+		tmp2 = tmp3;
 	}
+	else if (list)
+		return (add_new(list, tmp2, size));
 	else
 	{
 		list = check_size(list, size);
@@ -155,6 +181,8 @@ void	*ft_malloc(size_t size)
 //		if ((size + sizeof(t_list)) > (16 * getpagesize()))
 //			return (mmap(0, size, PROT_READ | PROT_WRITE, MAP_ANON | MAP_PRIVATE, -1, 0));
 	}
+	if (list == NULL)
+		return (NULL);
 	list = tmp2;
 	return (list->start);
 }
@@ -170,11 +198,19 @@ int main(void)
 //		printf("\nnull\n");
 	printf("\nlu %lu\n", (sizeof(t_list)));
 	printf("ext %p\n", *str);
-//	*str = ft_malloc(sizeof(int) * 8);
-//	*str = ft_malloc(sizeof(int) * 25);
+//segfault si trop gros chiffre
+	*str = ft_malloc(sizeof(int) * 8);
+	*str = ft_malloc(sizeof(int) * 25);
 	*str = ft_malloc(sizeof(int) * 100);
 	*str = ft_malloc(sizeof(int) * 1000);
 	*str = ft_malloc(sizeof(int) * 10000);
+	*str = ft_malloc(sizeof(int) * 20000);
+	*str = ft_malloc(sizeof(int) * 1000000);
+	*str = ft_malloc(sizeof(int) * 20000);
+	*str = ft_malloc(sizeof(int) * 10000);
+	*str = ft_malloc(sizeof(int) * 1000);
+	*str = ft_malloc(sizeof(int) * 100);
+	*str = ft_malloc(sizeof(int) * 2);
 	while (list != NULL)
 	{
 		printf("\nadresse %p\n", list);
@@ -182,6 +218,7 @@ int main(void)
 //		while (i++ < 56)
 //			printf("\nadresse %p\n", list->start--);
 		printf("\nlist sortie %p\n", list->start);
+		printf("\nlist free %d\n", list->isfree);
 		i= 0;
 /*		while (i < 32)
 		{
