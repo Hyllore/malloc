@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/28 10:41:08 by droly             #+#    #+#             */
-/*   Updated: 2017/03/13 17:23:33 by droly            ###   ########.fr       */
+/*   Updated: 2017/03/14 17:38:03 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 typedef struct		s_list
 {
-	int				size;
+	unsigned long	size;
 	int				isfree;
 	int				floor;
 	int				type;
@@ -28,11 +28,15 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
-/*typedef struct		s_struct
-{
-	void			*ptr;
-	t_list			*list;
-	t_list			*tmp;
-}					t_struct;
-*/
+t_list	*list;
+
+
+t_list	*split_mem(size_t size, t_list *list, int num);
+void	*add_new2(t_list *list, size_t size, t_list *tmp);
+void	*add_new(t_list *list, t_list *tmp2, size_t size);
+int		check_free(t_list *list, size_t size, t_list *tmp2);
+t_list	*begin_new(t_list *list, int num,  size_t size, int type);
+t_list	*check_size(t_list *list, size_t size);
+void	*ft_malloc(size_t size);
+
 #endif
