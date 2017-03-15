@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/14 14:46:32 by droly             #+#    #+#             */
-/*   Updated: 2017/03/14 14:46:59 by droly            ###   ########.fr       */
+/*   Updated: 2017/03/15 17:44:42 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,9 +51,9 @@ void	*add_new(t_list *list, t_list *tmp2, size_t size)
 
 	while (list != NULL)
 	{
-		if (list->isfree == 0 && list->size >= (size + sizeof(t_list)) && list->next != NULL)
+		if (list->isfree == 0 && list->size >= (size + sizeof(t_list)) && list->next != NULL && (((list->type == 0 && size <= ((unsigned long)(4 * getpagesize()) / 100)) || (list->type == 1 && size <= ((unsigned long)(16 * getpagesize()) / 100) && size > ((unsigned long)(4 * getpagesize()) / 100)))))
 			return (add_new2(list, size, NULL));
-		else if (list->isfree == 0 && list->size >= (size + sizeof(t_list)))
+		else if (list->isfree == 0 && list->size >= (size + sizeof(t_list)) && (((list->type == 0 && size <= ((unsigned long)(4 * getpagesize()) / 100)) || (list->type == 1 && size <= ((unsigned long)(16 * getpagesize()) / 100) && size > ((unsigned long)(4 * getpagesize()) / 100)))))
 		{
 				list->isfree = 1;
 				list->next = &list->start[size + 1];
@@ -64,10 +64,12 @@ void	*add_new(t_list *list, t_list *tmp2, size_t size)
 				list->next->next = NULL;
 				list->next->size = list->size - (size + sizeof(t_list));
 				list->size = size;
+	printf("size remaining%lu\n", list->next->size);
 				list = tmp2;
 				return (list->start);
 		}
 		list = list->next;
 	}
+
 	return (NULL);
 }
