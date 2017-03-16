@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/28 10:41:08 by droly             #+#    #+#             */
-/*   Updated: 2017/03/15 17:54:13 by droly            ###   ########.fr       */
+/*   Updated: 2017/03/16 17:57:14 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,7 @@ int		check_free(t_list *list, size_t size, t_list *tmp2);
 t_list	*begin_new(t_list *list, int num,  size_t size, int type);
 t_list	*check_size(t_list *list, size_t size);
 void	*ft_malloc(size_t size);
+int		ft_strcmp(const char *s1, const char *s2);
+void	ft_free(void *ptr);
 
 #endif

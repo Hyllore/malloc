@@ -6,11 +6,11 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/25 15:10:14 by droly             #+#    #+#             */
-/*   Updated: 2017/02/16 13:08:01 by droly            ###   ########.fr       */
+/*   Updated: 2017/03/16 16:38:03 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "malloc.h"
 
 int	ft_strcmp(const char *s1, const char *s2)
 {

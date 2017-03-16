@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/20 16:12:30 by droly             #+#    #+#             */
-/*   Updated: 2017/03/15 17:54:11 by droly            ###   ########.fr       */
+/*   Updated: 2017/03/16 17:57:09 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ t_list	*begin_new(t_list *list, int num,  size_t size, int type)
 	if((int)(tmp = mmap(0, ((num * getpagesize()) + (sizeof(t_list) * 100)), PROT_READ | PROT_WRITE, MAP_ANON | MAP_PRIVATE, -1, 0)) == -1)
 		return (NULL);
 	list = &tmp[0];
-	list->start = &tmp[sizeof(t_list) + 1];
+	list->start = &tmp[sizeof(t_list)];
 	list = split_mem(size, list, num);
 	list->floor = i;
 	list->type = type;
@@ -55,23 +55,23 @@ t_list	*begin_new(t_list *list, int num,  size_t size, int type)
 
 t_list	*check_size(t_list *list, size_t size)
 {
-	printf("\njte");
+//	printf("\njte");
 	if (size <= (unsigned long)((4 * getpagesize()) / 100))
 	{
-		printf("1er if 2 : %lu\n", size);
+//		printf("1er if 2 : %lu\n", size);
 		list = begin_new(list, 4, size, 0);
 	}
 	if (size <= (unsigned long)((16 * getpagesize()) / 100) && size > (unsigned long)((4 * getpagesize()) / 100))
 	{
-		printf("2eme if 2 : %lu\n", size);
+//		printf("2eme if 2 : %lu\n", size);
 		list = begin_new(list, 16, size, 1);
 	}
 	if (size > (unsigned long)((16 * getpagesize()) / 100))
 	{
-		printf("3eme if 2 : %lu\n", size);
+//		printf("3eme if 2 : %lu\n", size);
 		list = begin_new(list, size + sizeof(t_list) + 1, size, 2);
 	}
-	printf(" bez\n");
+//	printf(" bez\n");
 	return (list);
 }
 
@@ -82,7 +82,7 @@ void	*ft_malloc(size_t size)
 
 	if (list && check_free(list, size, NULL) == 0)
 	{
-		printf("1er if : %lu\n", size);
+//		printf("1er if : %lu\n", size);
 		tmp3 = list;
 		tmp2 = check_size(NULL, size);
 		while (list->next != NULL)
@@ -93,12 +93,12 @@ void	*ft_malloc(size_t size)
 	}
 	else if (list)
 	{
-		printf("2eme if : %lu\n", size);
+//		printf("2eme if : %lu\n", size);
 		return (add_new(list, NULL, size));
 	}
 	else
 	{
-		printf("3eme if : %lu\n", size);
+//		printf("3eme if : %lu\n", size);
 		list = check_size(list, size);
 		tmp2 = list;
 	}
@@ -112,6 +112,7 @@ int main(void)
 {
 	int *str;
 	int i;
+	t_list *tmp;
 
 	i = 0;
 	printf("\nlu %lu\n", (sizeof(t_list)));
@@ -132,12 +133,31 @@ int main(void)
 //	str = ft_malloc(sizeof(int) * 1000);
 //	str = ft_malloc(sizeof(int) * 100);
 //	str = ft_malloc(sizeof(int) * 2);
-	while (i < 100)
+	int y;
+
+	y = 0;
+	while (i < 3)
 	{
 		printf("\nnb : %d\n", i);
-		str = ft_malloc(656);
+		str = ft_malloc(5);
+		printf("\nadresse str %p\n", str);
+//	y = 0;
+///		while (y < 20)
+//		{
+//			str[y] = 1;
+///			printf("\nchiffre : %d\n", str[y]);
+//			y++;
+//		}
 		i++;
 	}
+	tmp = list;
+	i = 0;
+//	while (i < 69536)
+//	{
+//		list->start++;
+//		i++;
+//	}
+//		printf("\nadresses fin %p\n", list->start++);
 	i = 0;
 	//trouver pourquoi segfault si 655 et si plus de 100 appel
 	while (list != NULL)
@@ -149,16 +169,25 @@ int main(void)
 		printf("\nlist sortie %p\n", list->start);
 		printf("\nlist free %d\n", list->isfree);
 		i++;
-/*		while (i < 32)
-		{
-			printf(" %p\n", list->start++);
-			i++;
-		}*/
+//		while (i < 32)
+//		{
+//			printf(" %p\n", list->start++);
+//			i++;
+//		}
 		printf("type %d\n", list->type);
 		printf("floor %d\n", list->floor);
 		printf("size %lu\n", list->size);
-		list = list->next;
+		if (list->next != NULL)
+			list = list->next;
+		else
+			break;
 	}
+	i = 0;
+//	while (i < 36)
+//	{
+//		printf("\nadresses dispos %p\n", list->start++);
+//		i++;
+//	}
 	printf("\nnobre de tours : %d\n", i);
 	printf("\nsize get page 16 / 100 : %d\n", 16 * getpagesize() / 100);
 	printf("\nsize get page 4 / 100  : %d\n", 4 * getpagesize()/ 100);
@@ -166,11 +195,16 @@ int main(void)
 	printf("\nsize get page 4  : %d\n", 4 * getpagesize());
 	printf("\nsize get page 16 + sizeof(t_list) * 100 : %lu\n", 16 * getpagesize() +sizeof(t_list) * 100 );
 	printf("\nsize get page 4 + sizeof(t_list) * 100  : %lu\n", 4 * getpagesize() +sizeof(t_list) * 100 );
-	str = malloc(sizeof(int) * 2);
-	str[0] = 544;
-	str[1] = 5454;
-	str[2] = 64584;
-	printf("%d%d%d", str[0], str[1], str[2]);
+//	str = malloc(sizeof(int) * 2);
+//	str[0] = 544;
+//	str[1] = 5454;
+//	str[2] = 64584;
+//	printf("%d%d%d", str[0], str[1], str[2]);
+//	str = malloc(8);
+//	free(str);
+	list = tmp;
+	//trouver pourquoi c tjr la premiere adresse qui free
+	ft_free(str);
 }
 
 
