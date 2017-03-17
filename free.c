@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/14 15:04:08 by droly             #+#    #+#             */
-/*   Updated: 2017/03/16 17:54:09 by droly            ###   ########.fr       */
+/*   Updated: 2017/03/17 11:44:34 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ void	ft_free(void *ptr)
 			if (list->start == ptr)
 			{
 				printf("\nslt c 1 test\n");
+				list->isfree = 0;
+				list = tmp;
 				return ;
 			}
 			list = list->next;

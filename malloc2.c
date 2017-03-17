@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/14 14:46:32 by droly             #+#    #+#             */
-/*   Updated: 2017/03/16 12:04:11 by droly            ###   ########.fr       */
+/*   Updated: 2017/03/17 11:28:12 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ void	*add_new2(t_list *list, size_t size, t_list *tmp)
 
 void	*add_new(t_list *list, t_list *tmp2, size_t size)
 {
+	void *tmp;
 	tmp2 = list;
 
 	while (list != NULL)
@@ -65,8 +66,9 @@ void	*add_new(t_list *list, t_list *tmp2, size_t size)
 				list->next->size = list->size - (size + sizeof(t_list));
 				list->size = size;
 //	printf("size remaining%lu\n", list->next->size);
+				tmp = list->start;
 				list = tmp2;
-				return (list->start);
+				return (tmp);
 		}
 		list = list->next;
 	}

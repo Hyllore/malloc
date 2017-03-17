@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/20 16:12:30 by droly             #+#    #+#             */
-/*   Updated: 2017/03/16 17:57:09 by droly            ###   ########.fr       */
+/*   Updated: 2017/03/17 11:44:31 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,7 @@ void	*ft_malloc(size_t size)
 {
 	t_list *tmp2;
 	t_list *tmp3;
+	void *tmp4;
 
 	if (list && check_free(list, size, NULL) == 0)
 	{
@@ -104,13 +105,15 @@ void	*ft_malloc(size_t size)
 	}
 	if (list == NULL)
 		return (NULL);
+	tmp4 = list->start;
 	list = tmp2;
-	return (list->start);
+	return (tmp4);
 }
 
 int main(void)
 {
 	int *str;
+	int *ptr;
 	int i;
 	t_list *tmp;
 
@@ -136,11 +139,15 @@ int main(void)
 	int y;
 
 	y = 0;
-	while (i < 3)
-	{
+//	while (i < 3)
+//	{
 		printf("\nnb : %d\n", i);
 		str = ft_malloc(5);
 		printf("\nadresse str %p\n", str);
+		printf("\nnb : %d\n", i);
+		ptr = ft_malloc(5);
+		printf("\nadresse ptr %p\n", ptr);
+//		ft_free(str);
 //	y = 0;
 ///		while (y < 20)
 //		{
@@ -148,8 +155,8 @@ int main(void)
 ///			printf("\nchiffre : %d\n", str[y]);
 //			y++;
 //		}
-		i++;
-	}
+//		i++;
+//	}
 	tmp = list;
 	i = 0;
 //	while (i < 69536)
@@ -160,6 +167,8 @@ int main(void)
 //		printf("\nadresses fin %p\n", list->start++);
 	i = 0;
 	//trouver pourquoi segfault si 655 et si plus de 100 appel
+	ft_free(ptr);
+	list = tmp;
 	while (list != NULL)
 	{
 		printf("\nadresse %p\n", list);
@@ -204,7 +213,6 @@ int main(void)
 //	free(str);
 	list = tmp;
 	//trouver pourquoi c tjr la premiere adresse qui free
-	ft_free(str);
 }
 
 
