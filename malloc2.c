@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/14 14:46:32 by droly             #+#    #+#             */
-/*   Updated: 2017/03/20 16:27:14 by droly            ###   ########.fr       */
+/*   Updated: 2017/03/22 18:11:54 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_list		*split_mem(size_t size, t_list *list, int num)
 {
-	int i;
+	int		i;
 
 	i = 0;
 	list->size = size;
@@ -29,7 +29,7 @@ t_list		*split_mem(size_t size, t_list *list, int num)
 	return (list);
 }
 
-void	*add_new2(t_list *list, size_t size, t_list *tmp)
+void		*add_new2(t_list *list, size_t size, t_list *tmp)
 {
 	list->isfree = 1;
 	if (list->size >= (sizeof(t_list) + size + 1))
@@ -40,7 +40,8 @@ void	*add_new2(t_list *list, size_t size, t_list *tmp)
 		tmp->start = &tmp[sizeof(t_list)];
 		tmp->floor = list->floor;
 		tmp->type = list->type;
-		printf("size remaining hey: %lu\n", list->size - (size + sizeof(t_list)));
+		printf("size remaining hey: %lu\n", list->size - (size +
+					sizeof(t_list)));
 		tmp->size = list->size - (sizeof(t_list) + size);
 		tmp = &list->start[size];
 		list->next = tmp;
@@ -49,33 +50,41 @@ void	*add_new2(t_list *list, size_t size, t_list *tmp)
 	return (list->start);
 }
 
-void	*add_new(t_list *list, t_list *tmp2, size_t size)
+void		*add_new(t_list *list, t_list *tmp2, size_t size)
 {
-	void *tmp;
-	tmp2 = list;
+	void	*tmp;
 
+	tmp2 = list;
 	while (list != NULL)
 	{
-		if (list->isfree == 0 && list->size >= size && list->next != NULL && (((list->type == 0 && size <= ((unsigned long)(4 * getpagesize()) / 100)) || (list->type == 1 && size <= ((unsigned long)(16 * getpagesize()) / 100) && size > ((unsigned long)(4 * getpagesize()) / 100)))))
+		if (list->isfree == 0 && list->size >= size && list->next != NULL &&
+		(((list->type == 0 && size <= ((unsigned long)(4 * getpagesize()) /
+		100)) || (list->type == 1 && size <= ((unsigned long)(16 *
+		getpagesize()) / 100) && size > ((unsigned long)(4 * getpagesize()) /
+		100)))))
 			return (add_new2(list, size, NULL));
-		else if (list->isfree == 0 && list->size >= size && (((list->type == 0 && size <= ((unsigned long)(4 * getpagesize()) / 100)) || (list->type == 1 && size <= ((unsigned long)(16 * getpagesize()) / 100) && size > ((unsigned long)(4 * getpagesize()) / 100)))))
+		else if (list->isfree == 0 && list->size >= size && (((list->type == 0
+		&& size <= ((unsigned long)(4 * getpagesize()) / 100)) || (list->type
+		== 1 && size <= ((unsigned long)(16 * getpagesize()) / 100) && size >
+		((unsigned long)(4 * getpagesize()) / 100)))))
 		{
-				list->isfree = 1;
-				if (list->size >= (sizeof(t_list) + size + 1))
-				{
-					list->next = &list->start[size];
-					list->next->isfree = 0;
-					list->next->floor = list->floor;
-					list->next->type = list->type;
-					list->next->start = &list->start[size + sizeof(t_list)];
-					list->next->next = NULL;
-					printf("size remaining: %lu\n", list->size - (size + sizeof(t_list)));
-					list->next->size = list->size - (size + sizeof(t_list));
-					list->size = size;
-				}
-				tmp = list->start;
-				list = tmp2;
-				return (tmp);
+			list->isfree = 1;
+			if (list->size >= (sizeof(t_list) + size + 1))
+			{
+				list->next = &list->start[size];
+				list->next->isfree = 0;
+				list->next->floor = list->floor;
+				list->next->type = list->type;
+				list->next->start = &list->start[size + sizeof(t_list)];
+				list->next->next = NULL;
+				printf("size remaining: %lu\n", list->size - (size +
+							sizeof(t_list)));
+				list->next->size = list->size - (size + sizeof(t_list));
+				list->size = size;
+			}
+			tmp = list->start;
+			list = tmp2;
+			return (tmp);
 		}
 		list = list->next;
 	}

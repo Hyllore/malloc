@@ -6,19 +6,22 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/20 16:12:30 by droly             #+#    #+#             */
-/*   Updated: 2017/03/21 17:07:40 by droly            ###   ########.fr       */
+/*   Updated: 2017/03/22 18:11:56 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "malloc.h"
 
-int		check_free(t_list *list, size_t size, t_list *tmp2)
+int				check_free(t_list *list, size_t size, t_list *tmp2)
 {
 	while (list != NULL)
 	{
 		if (list->isfree == 0 && list->size >= size)
 		{
-			if ((list->type == 0 && size <= ((unsigned long)(4 * getpagesize()) / 100)) || (list->type == 1 && size <= (unsigned long)((16 * getpagesize()) / 100) && size > (unsigned long)((4 * getpagesize()) / 100)))
+			if ((list->type == 0 && size <= ((unsigned long)(4 * getpagesize())
+			/ 100)) || (list->type == 1 && size <= (unsigned long)((16 *
+			getpagesize()) / 100) && size > (unsigned long)((4 *
+			getpagesize()) / 100)))
 			{
 				list = tmp2;
 				return (1);
@@ -30,20 +33,22 @@ int		check_free(t_list *list, size_t size, t_list *tmp2)
 	return (0);
 }
 
-t_list	*begin_new(t_list *list, int num,  size_t size, int type)
+t_list			*begin_new(t_list *list, int num,  size_t size, int type)
 {
-	void *tmp;
-	static int i = 0;
+	void		*tmp;
+	static int	i = 0;
 
 	tmp = NULL;
 	if (num <= 16)
 	{
-		if ((int)(tmp = mmap(0, ((num * getpagesize()) + (sizeof(t_list) * 100)), PROT_READ | PROT_WRITE, MAP_ANON | MAP_PRIVATE, -1, 0)) == -1)
+		if ((int)(tmp = mmap(0, ((num * getpagesize()) + (sizeof(t_list) *
+		100)), PROT_READ | PROT_WRITE, MAP_ANON | MAP_PRIVATE, -1, 0)) == -1)
 			return (NULL);
 	}
 	else
 	{
-		if ((int)(tmp = mmap(0, num, PROT_READ | PROT_WRITE, MAP_ANON | MAP_PRIVATE, -1, 0)) == -1)
+		if ((int)(tmp = mmap(0, num, PROT_READ | PROT_WRITE, MAP_ANON |
+						MAP_PRIVATE, -1, 0)) == -1)
 			return (NULL);
 	}
 	list = &tmp[0];
@@ -53,7 +58,8 @@ t_list	*begin_new(t_list *list, int num,  size_t size, int type)
 	list->type = type;
 	if (num <= 16)
 	{
-		list->next->size = (((num * getpagesize()) + (sizeof(t_list) * 100)) - (size + sizeof(t_list)));
+		list->next->size = (((num * getpagesize()) + (sizeof(t_list) * 100))
+				- (size + sizeof(t_list)));
 		list->next->floor = i;
 		list->next->type = type;
 	}
@@ -61,33 +67,28 @@ t_list	*begin_new(t_list *list, int num,  size_t size, int type)
 	return (list);
 }
 
-t_list	*check_size(t_list *list, size_t size)
+t_list			*check_size(t_list *list, size_t size)
 {
-//	printf("\njte");
 	if (size <= (unsigned long)((4 * getpagesize()) / 100))
 	{
-//		printf("1er if 2 : %lu\n", size);
 		list = begin_new(list, 4, size, 0);
 	}
 	if (size <= (unsigned long)((16 * getpagesize()) / 100) && size > (unsigned long)((4 * getpagesize()) / 100))
 	{
-//		printf("2eme if 2 : %lu\n", size);
 		list = begin_new(list, 16, size, 1);
 	}
 	if (size > (unsigned long)((16 * getpagesize()) / 100))
 	{
-//		printf("3eme if 2 : %lu\n", size);
 		list = begin_new(list, size + sizeof(t_list) + 1, size, 2);
 	}
-//	printf(" bez\n");
 	return (list);
 }
 
-void	*ft_malloc(size_t size)
+void			*ft_malloc(size_t size)
 {
-	t_list *tmp2;
-	t_list *tmp3;
-	void *tmp4;
+	t_list		*tmp2;
+	t_list		*tmp3;
+	void		*tmp4;
 
 	if (list && check_free(list, size, NULL) == 0)
 	{
@@ -98,6 +99,7 @@ void	*ft_malloc(size_t size)
 			list = list->next;
 		if (list->next == NULL)
 			list->next = tmp2;
+		list = list->next;
 		tmp2 = tmp3;
 	}
 	else if (list)
@@ -111,19 +113,19 @@ void	*ft_malloc(size_t size)
 		list = check_size(list, size);
 		tmp2 = list;
 	}
-	if (list == NULL)
-		return (NULL);
+//	if (list == NULL)
+//		return (NULL);
 	tmp4 = list->start;
 	list = tmp2;
 	return (tmp4);
 }
 
-int main(void)
+int				main(void)
 {
-	int *str;
-//	int *ptr;
-	int i;
-	t_list *tmp;
+	int			*str;
+	int			*ptr;
+	int			i;
+	t_list		*tmp;
 
 	i = 0;
 	printf("\nlu %lu\n", (sizeof(t_list)));
@@ -150,11 +152,12 @@ int main(void)
 //	while (i < 3)
 //	{
 //		printf("\nnb : %d\n", i);
-//		str = ft_malloc(70);
-//		printf("\nadresse str %p\n", str);
-//		printf("\nnb : %d\n", i);
-//		ptr = ft_malloc(70);
-//		printf("\nadresse ptr %p\n", ptr);
+		str = ft_malloc(70);
+		printf("\nadresse str %p\n", str);
+		printf("\nnb : %d\n", i);
+		tmp = list;
+		ptr = ft_malloc(70);
+		printf("\nadresse ptr %p\n", ptr);
 //		ft_free(str);
 //	y = 0;
 ///		while (y < 20)
@@ -174,13 +177,14 @@ int main(void)
 //		printf("\nadresses fin %p\n", list->start++);
 	i = 0;
 	//trouver pourquoi segfault si 655 et si plus de 100 appel
-//	ft_free(ptr);
-//	ft_free(str);
+	ft_free(ptr);
+	ft_free(str);
 		printf("\nnb : %d\n", i);
-		str = ft_malloc(1);
-		tmp = list;
+		str = ft_malloc(250);
 		printf("\nadresse str %p\n", str);
-ft_free(str);
+		ptr = ft_malloc(1);
+		printf("\nadresse ptr %p\n", ptr);
+ft_free(ptr);
 			str = ft_malloc(2);
 		printf("\nadresse str %p\n", str);
 ft_free(str);
@@ -208,8 +212,11 @@ ft_free(str);
 		str = ft_malloc(10);
 		printf("\nadresse str %p\n", str);
 ft_free(str);
-		str = ft_malloc(10);
-		printf("\nadresse str %p\n", str);
+		ptr = ft_malloc(9000);
+		printf("\nadresse ptr %p\n", ptr);
+		ft_free(ptr);
+//		str = ft_malloc(10);
+//		printf("\nadresse str %p\n", str);
 //		printf("\nadresse ptr %p\n", ptr);
 	list = tmp;
 	while (list != NULL)
@@ -259,15 +266,3 @@ ft_free(str);
 //	list = tmp;
 	//trouver pourquoi c tjr la premiere adresse qui free
 }
-
-
-//			printf("\nhey\n");
-//			tmp = mmap(0, (16 * getgesize() +sizeof(t_list) * 1pagesize()), PROT_READ | PROT_WRITE, MAP_ANON | MAP_PRIVATE, -1, 0);
-//			list = &tmp[0];
-//			tmp2 = list;
-//			printf("sizet_listjve%lu\n", sizeof(t_list));
-//			list->start = &tmp[sizeof(t_list) + 1];
-//			printf("tmp %p\n", &tmp[sizeof(t_list)]);
-//			list = split_mem(size, list);
-//			list->next->size = ((16 * getpagesize()) - (size + sizeof(t_list)));
-
