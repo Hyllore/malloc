@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/14 14:46:32 by droly             #+#    #+#             */
-/*   Updated: 2017/03/22 18:11:54 by droly            ###   ########.fr       */
+/*   Updated: 2017/03/24 16:39:25 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ void		*add_new2(t_list *list, size_t size, t_list *tmp)
 		tmp->start = &tmp[sizeof(t_list)];
 		tmp->floor = list->floor;
 		tmp->type = list->type;
-		printf("size remaining hey: %lu\n", list->size - (size +
-					sizeof(t_list)));
+//		printf("size remaining hey: %lu\n", list->size - (size +
+//					sizeof(t_list)));
 		tmp->size = list->size - (sizeof(t_list) + size);
 		tmp = &list->start[size];
 		list->next = tmp;
@@ -77,8 +77,8 @@ void		*add_new(t_list *list, t_list *tmp2, size_t size)
 				list->next->type = list->type;
 				list->next->start = &list->start[size + sizeof(t_list)];
 				list->next->next = NULL;
-				printf("size remaining: %lu\n", list->size - (size +
-							sizeof(t_list)));
+//				printf("size remaining: %lu\n", list->size - (size +
+//							sizeof(t_list)));
 				list->next->size = list->size - (size + sizeof(t_list));
 				list->size = size;
 			}

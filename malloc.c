@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/20 16:12:30 by droly             #+#    #+#             */
-/*   Updated: 2017/03/22 18:11:56 by droly            ###   ########.fr       */
+/*   Updated: 2017/03/24 17:19:48 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,15 +84,17 @@ t_list			*check_size(t_list *list, size_t size)
 	return (list);
 }
 
-void			*ft_malloc(size_t size)
+void			*malloc(size_t size)
 {
 	t_list		*tmp2;
 	t_list		*tmp3;
 	void		*tmp4;
+	write(1, "elo", 3);
 
 	if (list && check_free(list, size, NULL) == 0)
 	{
-		printf("1er if : %lu\n", size);
+		write(1, "elo3", 4);
+//		printf("1er if : %lu\n", size);
 		tmp3 = list;
 		tmp2 = check_size(NULL, size);
 		while (list->next != NULL)
@@ -104,12 +106,14 @@ void			*ft_malloc(size_t size)
 	}
 	else if (list)
 	{
-		printf("2eme if : %lu\n", size);
+		write(1, "elo2", 4);
+//		printf("2eme if : %lu\n", size);
 		return (add_new(list, NULL, size));
 	}
 	else
 	{
-		printf("3eme if : %lu\n", size);
+		write(1, "elo5", 4);
+//		printf("3eme if : %lu\n", size);
 		list = check_size(list, size);
 		tmp2 = list;
 	}
@@ -120,7 +124,7 @@ void			*ft_malloc(size_t size)
 	return (tmp4);
 }
 
-int				main(void)
+/*int				main(void)
 {
 	int			*str;
 	int			*ptr;
@@ -212,9 +216,14 @@ ft_free(str);
 		str = ft_malloc(10);
 		printf("\nadresse str %p\n", str);
 ft_free(str);
-		ptr = ft_malloc(9000);
+		str = ft_malloc(9000);
+		printf("\nadresse str %p\n", str);
+		ptr = ft_malloc(9005);
 		printf("\nadresse ptr %p\n", ptr);
-		ft_free(ptr);
+		ptr = ft_realloc(ptr, 8000);
+		str = ft_realloc(str, 8500);
+//		ft_malloc(8000);
+//		ft_free(ptr);
 //		str = ft_malloc(10);
 //		printf("\nadresse str %p\n", str);
 //		printf("\nadresse ptr %p\n", ptr);
@@ -265,4 +274,4 @@ ft_free(str);
 //	ft_free(str);
 //	list = tmp;
 	//trouver pourquoi c tjr la premiere adresse qui free
-}
+}*/

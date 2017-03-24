@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/14 15:04:08 by droly             #+#    #+#             */
-/*   Updated: 2017/03/23 18:42:21 by droly            ###   ########.fr       */
+/*   Updated: 2017/03/24 16:41:04 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,14 +51,14 @@ int			check_unmap(t_list *tmp3)
 	check = 0;
 	while (list != NULL)
 	{
-		printf("\nniktamer\n");
+//		printf("\nniktamer\n");
 		floor = list->floor;
 		tmp = list;
 		while (list->next != NULL && floor == list->floor)
 		{
 			if (list->isfree == 1)
 			{
-				printf("\nserieux\n");
+//				printf("\nserieux\n");
 				check = 1;
 				while (list->next != NULL && list->floor == floor)
 					list = list->next;
@@ -71,18 +71,18 @@ int			check_unmap(t_list *tmp3)
 			check = 1;
 		if (check == 0 && list->type == 0 && i >= 10)
 		{
-			printf("\nserieux2\n");
+//			printf("\nserieux2\n");
 			tmp3 = list;
 			i2 = find_start(list->floor, tmp2);
 			munmap(tmp, ((4 * getpagesize()) + (sizeof(t_list) * 100)));
 			if (tmp2 && i2 == 0)
 				list = tmp2;
-			printf("\ns?\n");
+//			printf("\ns?\n");
 			return (i2);
 		}
 		if (check == 0 && list->type == 1 && i >= 10)
 		{
-			printf("\nserieux3\n");
+//			printf("\nserieux3\n");
 			tmp3 = list;
 			find_start(list->floor, tmp2);
 			munmap(tmp, ((16 * getpagesize()) + (sizeof(t_list) * 100)));
@@ -95,12 +95,12 @@ int			check_unmap(t_list *tmp3)
 			list = list->next;
 		i = 0;
 	}
-	printf("test de merde%d", tmp2->isfree);
+//	printf("test de merde%d", tmp2->isfree);
 	list = tmp2;
 	return (0);
 }
 
-void		ft_free(void *ptr)
+void		free(void *ptr)
 {
 	t_list	*tmp2;
 	t_list	*tmp3;
@@ -113,15 +113,15 @@ void		ft_free(void *ptr)
 		tmp2 = list;
 		while (list != NULL)
 		{
-			printf("\nadresses dispos %p\n", list->start);
-			printf("\nadresses de tamer la put %p\n", ptr);
+//			printf("\nadresses dispos %p\n", list->start);
+//			printf("\nadresses de tamer la put %p\n", ptr);
 			if (list->start == ptr)
 			{
-				printf("\nslt c 1 test\n");
+//				printf("\nslt c 1 test\n");
 				list->isfree = 0;
 				if (list->type == 2)
 				{
-					printf("\nserieux4\n");
+//					printf("\nserieux4\n");
 					tmp3 = list;
 					find_start(list->floor, tmp2);
 					munmap(tmp3, list->size + sizeof(t_list) + 1);

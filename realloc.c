@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/22 16:57:28 by droly             #+#    #+#             */
-/*   Updated: 2017/03/23 18:42:19 by droly            ###   ########.fr       */
+/*   Updated: 2017/03/24 16:41:32 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void		*copy_void(void *ptr, void *tmp2, size_t size, size_t old_size)
 	{
 		while (i < old_size)
 		{
+//			printf("connard4");
 			((char*)tmp2)[i] = ((unsigned char*)ptr)[i];
 			i++;
 		}
@@ -31,6 +32,7 @@ void		*copy_void(void *ptr, void *tmp2, size_t size, size_t old_size)
 	{
 		while (i < size)
 		{
+//			printf("connard5");
 			((char*)tmp2)[i] = ((unsigned char*)ptr)[i];
 			i++;
 		}
@@ -38,7 +40,7 @@ void		*copy_void(void *ptr, void *tmp2, size_t size, size_t old_size)
 	return (tmp2);
 }
 
-void		*ft_realloc(void *ptr, size_t size)
+void		*realloc(void *ptr, size_t size)
 {
 	t_list	*tmp;
 	void	*tmp2;
@@ -48,20 +50,26 @@ void		*ft_realloc(void *ptr, size_t size)
 		list = list->next;
 	if (list == NULL)
 	{
+//		printf("connard1");
 		list = tmp;
 		return (NULL);
 	}
 	if (size == 0)
 	{
-		ft_free(ptr);
+//		printf("connard2");
+		free(ptr);
 		list = tmp;
 		return (NULL);
 	}
 	if (size != list->size)
 	{
-		tmp2 = ft_malloc(size);
+//		printf("\nconnard3\n");
+//		printf("\nsize : %lu\n", list->size);
+		list = tmp;
+		tmp2 = malloc(size);
 		tmp2 = copy_void(ptr, tmp2, size, list->size);
-		ft_free(ptr);
+		free(ptr);
+//		printf("\nsizetamer : %p\n", list);
 		list = tmp;
 		return (tmp2);
 	}
