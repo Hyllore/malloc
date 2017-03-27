@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/20 16:12:30 by droly             #+#    #+#             */
-/*   Updated: 2017/03/24 17:19:48 by droly            ###   ########.fr       */
+/*   Updated: 2017/03/27 13:58:22 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,11 +89,11 @@ void			*malloc(size_t size)
 	t_list		*tmp2;
 	t_list		*tmp3;
 	void		*tmp4;
-	write(1, "elo", 3);
+//	write(1, "elo", 3);
 
 	if (list && check_free(list, size, NULL) == 0)
 	{
-		write(1, "elo3", 4);
+//		write(1, "elo3", 4);
 //		printf("1er if : %lu\n", size);
 		tmp3 = list;
 		tmp2 = check_size(NULL, size);
@@ -106,13 +106,13 @@ void			*malloc(size_t size)
 	}
 	else if (list)
 	{
-		write(1, "elo2", 4);
+//		write(1, "elo2", 4);
 //		printf("2eme if : %lu\n", size);
 		return (add_new(list, NULL, size));
 	}
 	else
 	{
-		write(1, "elo5", 4);
+//		write(1, "elo5", 4);
 //		printf("3eme if : %lu\n", size);
 		list = check_size(list, size);
 		tmp2 = list;
@@ -156,11 +156,12 @@ void			*malloc(size_t size)
 //	while (i < 3)
 //	{
 //		printf("\nnb : %d\n", i);
-		str = ft_malloc(70);
+		str = malloc(16 * 10 * 10);
 		printf("\nadresse str %p\n", str);
 		printf("\nnb : %d\n", i);
 		tmp = list;
-		ptr = ft_malloc(70);
+		free(str);
+		ptr = malloc(120 * 10 * 10);
 		printf("\nadresse ptr %p\n", ptr);
 //		ft_free(str);
 //	y = 0;
@@ -181,47 +182,47 @@ void			*malloc(size_t size)
 //		printf("\nadresses fin %p\n", list->start++);
 	i = 0;
 	//trouver pourquoi segfault si 655 et si plus de 100 appel
-	ft_free(ptr);
-	ft_free(str);
-		printf("\nnb : %d\n", i);
-		str = ft_malloc(250);
+//	free(ptr);
+//	free(str);
+//		printf("\nnb : %d\n", i);
+		str = malloc(250);
 		printf("\nadresse str %p\n", str);
-		ptr = ft_malloc(1);
+		ptr = malloc(1);
 		printf("\nadresse ptr %p\n", ptr);
-ft_free(ptr);
-			str = ft_malloc(2);
+free(ptr);
+			str = malloc(2);
 		printf("\nadresse str %p\n", str);
-ft_free(str);
-		str = ft_malloc(3);
+free(str);
+		str = malloc(3);
 		printf("\nadresse str %p\n", str);
-ft_free(str);
-		str = ft_malloc(4);
+free(str);
+		str = malloc(4);
 		printf("\nadresse str %p\n", str);
-ft_free(str);
-		str = ft_malloc(5);
+free(str);
+	str = malloc(5);
 		printf("\nadresse str %p\n", str);
-ft_free(str);
-		str = ft_malloc(6);
+free(str);
+		str = malloc(6);
 		printf("\nadresse str %p\n", str);
-ft_free(str);
-	str = ft_malloc(7);
+free(str);
+	str = malloc(7);
 		printf("\nadresse str %p\n", str);
-ft_free(str);
-		str = ft_malloc(8);
+free(str);
+		str = malloc(8);
 		printf("\nadresse str %p\n", str);
-ft_free(str);
-			str = ft_malloc(9);
+free(str);
+			str = malloc(9);
 		printf("\nadresse str %p\n", str);
-ft_free(str);
-		str = ft_malloc(10);
+free(str);
+		str = malloc(10);
 		printf("\nadresse str %p\n", str);
-ft_free(str);
-		str = ft_malloc(9000);
+free(str);
+		str = malloc(9000);
 		printf("\nadresse str %p\n", str);
-		ptr = ft_malloc(9005);
+		ptr = malloc(9005);
 		printf("\nadresse ptr %p\n", ptr);
-		ptr = ft_realloc(ptr, 8000);
-		str = ft_realloc(str, 8500);
+		ptr = realloc(ptr, 8000);
+		str = realloc(str, 8500);
 //		ft_malloc(8000);
 //		ft_free(ptr);
 //		str = ft_malloc(10);

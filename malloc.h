@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/28 10:41:08 by droly             #+#    #+#             */
-/*   Updated: 2017/03/24 15:35:02 by droly            ###   ########.fr       */
+/*   Updated: 2017/03/27 18:01:59 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,12 @@ int		check_free(t_list *list, size_t size, t_list *tmp2);
 t_list	*begin_new(t_list *list, int num,  size_t size, int type);
 t_list	*check_size(t_list *list, size_t size);
 void	*malloc(size_t size);
-int		ft_strcmp(const char *s1, const char *s2);
 void	free(void *ptr);
 void	*realloc(void *ptr, size_t size);
+void	ft_putchar(char c);
+void	ft_putnbr(int n);
+void	ft_putstr(char *str);
+void	show_alloc_mem();
+char	*ft_itoa_base_ull(unsigned long long value, int base);
 
 #endif

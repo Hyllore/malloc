@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/22 16:57:28 by droly             #+#    #+#             */
-/*   Updated: 2017/03/24 16:41:32 by droly            ###   ########.fr       */
+/*   Updated: 2017/03/27 14:23:05 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ void		*realloc(void *ptr, size_t size)
 		free(ptr);
 //		printf("\nsizetamer : %p\n", list);
 		list = tmp;
+//		printf("\ntest seg\n");
 		return (tmp2);
 	}
 	list = tmp;

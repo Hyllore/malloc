@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/14 15:04:08 by droly             #+#    #+#             */
-/*   Updated: 2017/03/24 16:41:04 by droly            ###   ########.fr       */
+/*   Updated: 2017/03/27 13:59:41 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int			find_start(int floor, t_list *tmp2)
 	{
 		while (list != NULL && list->floor == floor)
 			list = list->next;
+//		printf("\nhey\n");
 		return (1);
 	}
 	while (list != NULL && list->next->floor != floor)
@@ -124,7 +125,11 @@ void		free(void *ptr)
 //					printf("\nserieux4\n");
 					tmp3 = list;
 					find_start(list->floor, tmp2);
-					munmap(tmp3, list->size + sizeof(t_list) + 1);
+//					printf("\ntmp3->floor: %d\n", tmp3->floor);
+//					printf("\ntmp3->size: %lu\n", tmp3->size);
+					munmap(tmp3, tmp3->size + sizeof(t_list) + 1);
+//				printf("\nouah\n");
+				i = 1;//g modfie ca
 				}
 				else
 				{
@@ -132,7 +137,11 @@ void		free(void *ptr)
 					i = check_unmap(tmp3);
 				}
 				if (i == 0)
+				{
+//					printf("\netst\n");
 					list = tmp2;
+				}
+//				printf("\nouah\n");
 				return ;
 			}
 			list = list->next;

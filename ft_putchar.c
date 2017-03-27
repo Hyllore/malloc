@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/23 15:09:32 by droly             #+#    #+#             */
-/*   Updated: 2016/02/26 14:13:43 by droly            ###   ########.fr       */
+/*   Created: 2015/11/23 15:10:04 by droly             #+#    #+#             */
+/*   Updated: 2017/03/27 17:20:33 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "malloc.h"
 
-void	ft_putstr(char *str)
+void	ft_putchar(char c)
 {
-	int	index;
-
-	index = 0;
-	if (str == NULL)
-		return ;
-	while (str[index] != '\0')
-	{
-		ft_putchar(str[index]);
-		index++;
-	}
+	write(1, &c, 1);
 }

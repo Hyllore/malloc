@@ -6,14 +6,16 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/24 17:21:29 by droly             #+#    #+#             */
-/*   Updated: 2017/03/24 17:54:31 by droly            ###   ########.fr       */
+/*   Updated: 2017/03/27 17:41:04 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "malloc.h"
 #include "string.h"
+#include "unistd.h"
+#include "stdlib.h"
 
-#define M1 (1024 * 1024)
+#define M1 (1024 * 1024 )
 
 void        print(char *s)
 {
@@ -22,14 +24,15 @@ void        print(char *s)
 
 int            main(void)
 {
-	    char    *addr1;
-		    char    *addr3;
-
-			    addr1 = (char *)malloc(16 * M1);
-				    strcpy(addr1, "Bonjours\n");
-					    print(addr1);
-						    addr3 = (char *)realloc(addr1, 128 * M1);
-							    addr3[127 * M1] = 42;
-								    print(addr3);
-									    return (0);
+	char tmp[10];
+malloc(1024);
+    malloc(1024 * 32);
+	    malloc(1024 * 1024);
+		    malloc(1024 * 1024 * 16);
+			    malloc(1024 * 1024 * 128);
+				    print("\n---------show_alloc_mem()------------\n");
+					    show_alloc_mem();
+						    print(&tmp[0]);
+//							    show_alloc_mem_ex();
+								    return (0);
 }
