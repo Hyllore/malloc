@@ -6,11 +6,11 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 11:52:50 by droly             #+#    #+#             */
-/*   Updated: 2015/12/04 16:09:19 by droly            ###   ########.fr       */
+/*   Updated: 2017/03/28 12:11:07 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "malloc.h"
 
 size_t	ft_strlen(const char *s)
 {

@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/28 10:41:08 by droly             #+#    #+#             */
-/*   Updated: 2017/03/27 18:01:59 by droly            ###   ########.fr       */
+/*   Updated: 2017/03/28 12:11:37 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,6 @@ void	ft_putnbr(int n);
 void	ft_putstr(char *str);
 void	show_alloc_mem();
 char	*ft_itoa_base_ull(unsigned long long value, int base);
+size_t	ft_strlen(const char *s);
 
 #endif

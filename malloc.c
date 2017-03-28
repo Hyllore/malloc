@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/20 16:12:30 by droly             #+#    #+#             */
-/*   Updated: 2017/03/27 13:58:22 by droly            ###   ########.fr       */
+/*   Updated: 2017/03/28 17:03:17 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ t_list			*begin_new(t_list *list, int num,  size_t size, int type)
 						MAP_PRIVATE, -1, 0)) == -1)
 			return (NULL);
 	}
-	list = &tmp[0];
+	list = tmp;
 	list->start = &tmp[sizeof(t_list)];
 	list = split_mem(size, list, num);
 	list->floor = i;
