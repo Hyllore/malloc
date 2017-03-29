@@ -6,13 +6,20 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/27 14:23:24 by droly             #+#    #+#             */
-/*   Updated: 2017/03/28 16:06:45 by droly            ###   ########.fr       */
+/*   Updated: 2017/03/29 18:01:23 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "malloc.h"
 
-void	begin_type(int type, char *str)
+void		showadd(void *str)
+{
+	str = ft_itoa_base_ull((unsigned long long)str, 16);
+	ft_putstr(str);
+	free(str);
+}
+
+void		begin_type(int type, char *str)
 {
 	if (type == 0)
 		ft_putstr("TINY : 0x");
@@ -26,7 +33,7 @@ void	begin_type(int type, char *str)
 	ft_putchar('\n');
 }
 
-void	middle_type(char *str)
+void		middle_type(char *str)
 {
 	ft_putstr("0x");
 	str = ft_itoa_base_ull((unsigned long long)list->start, 16);
@@ -41,11 +48,11 @@ void	middle_type(char *str)
 	ft_putstr(" octets\n");
 }
 
-void	putintab(t_list *tmp, int type)
+void		putintab(t_list *tmp, int type)
 {
-	int i;
-	char *str;
-	int floor;
+	int		i;
+	char	*str;
+	int		floor;
 
 	floor = -1;
 	str = NULL;
@@ -62,10 +69,10 @@ void	putintab(t_list *tmp, int type)
 	list = tmp;
 }
 
-void	show_alloc_mem()
+void		show_alloc_mem(void)
 {
 	t_list	*tmp;
-	char *ans;
+	char	*ans;
 
 	ans = NULL;
 	tmp = list;

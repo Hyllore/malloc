@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/20 16:12:30 by droly             #+#    #+#             */
-/*   Updated: 2017/03/28 17:03:17 by droly            ###   ########.fr       */
+/*   Updated: 2017/03/29 18:02:19 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,24 +33,30 @@ int				check_free(t_list *list, size_t size, t_list *tmp2)
 	return (0);
 }
 
-t_list			*begin_new(t_list *list, int num,  size_t size, int type)
+void			*begin_new2(int num, t_list *tmp)
 {
-	void		*tmp;
-	static int	i = 0;
-
-	tmp = NULL;
 	if (num <= 16)
 	{
-		if ((int)(tmp = mmap(0, ((num * getpagesize()) + (sizeof(t_list) *
-		100)), PROT_READ | PROT_WRITE, MAP_ANON | MAP_PRIVATE, -1, 0)) == -1)
+		if ((tmp = mmap(0, ((num * getpagesize()) + (sizeof(t_list) *
+		100)), PROT_READ | PROT_WRITE, MAP_ANON | MAP_PRIVATE, -1, 0)) ==
+				MAP_FAILED)
 			return (NULL);
 	}
 	else
 	{
-		if ((int)(tmp = mmap(0, num, PROT_READ | PROT_WRITE, MAP_ANON |
-						MAP_PRIVATE, -1, 0)) == -1)
+		if ((tmp = mmap(0, num, PROT_READ | PROT_WRITE, MAP_ANON |
+						MAP_PRIVATE, -1, 0)) == MAP_FAILED)
 			return (NULL);
 	}
+	return (tmp);
+}
+
+t_list			*begin_new(t_list *list, int num, size_t size, int type)
+{
+	void		*tmp;
+	static int	i = 0;
+
+	tmp = begin_new2(num, NULL);
 	list = tmp;
 	list->start = &tmp[sizeof(t_list)];
 	list = split_mem(size, list, num);
@@ -73,7 +79,8 @@ t_list			*check_size(t_list *list, size_t size)
 	{
 		list = begin_new(list, 4, size, 0);
 	}
-	if (size <= (unsigned long)((16 * getpagesize()) / 100) && size > (unsigned long)((4 * getpagesize()) / 100))
+	if (size <= (unsigned long)((16 * getpagesize()) / 100) && size >
+			(unsigned long)((4 * getpagesize()) / 100))
 	{
 		list = begin_new(list, 16, size, 1);
 	}
@@ -89,10 +96,19 @@ void			*malloc(size_t size)
 	t_list		*tmp2;
 	t_list		*tmp3;
 	void		*tmp4;
-//	write(1, "elo", 3);
 
+//	write(1, "elo", 3);
+//	puts((size + sizeof(t_list)));
+//	printf("%u", size + sizeof(t_list));
+	ft_putstr("\nmalloc\n");
+	if (size > 2147483606)
+	{
+		ft_putstr("\nmalloc out 2\n");
+		return (NULL);
+	}
 	if (list && check_free(list, size, NULL) == 0)
 	{
+		ft_putstr("\nmalloc begin new\n");
 //		write(1, "elo3", 4);
 //		printf("1er if : %lu\n", size);
 		tmp3 = list;
@@ -108,10 +124,12 @@ void			*malloc(size_t size)
 	{
 //		write(1, "elo2", 4);
 //		printf("2eme if : %lu\n", size);
-		return (add_new(list, NULL, size));
+		ft_putstr("\nmalloc out 3\n");
+		return (add_new(list, NULL, size, list));
 	}
 	else
 	{
+		ft_putstr("\nmalloc start\n");
 //		write(1, "elo5", 4);
 //		printf("3eme if : %lu\n", size);
 		list = check_size(list, size);
@@ -121,158 +139,8 @@ void			*malloc(size_t size)
 //		return (NULL);
 	tmp4 = list->start;
 	list = tmp2;
+//	ft_putstr("hey\n");
+	ft_putstr("\nmalloc out\n");
+//	show_alloc_mem();
 	return (tmp4);
 }
-
-/*int				main(void)
-{
-	int			*str;
-	int			*ptr;
-	int			i;
-	t_list		*tmp;
-
-	i = 0;
-	printf("\nlu %lu\n", (sizeof(t_list)));
-//	if ((*str = ft_malloc(sizeof(int) * 8)) == NULL)
-//		printf("\nnull\n");
-	printf("\nlu %lu\n", (sizeof(t_list)));
-//	printf("ext %p\n", *str);
-//segfault si trop gros chiffre
-//	str = ft_malloc(sizeof(int) * 8);
-///	str = ft_malloc(sizeof(int) * 25);
-//	str = ft_malloc(sizeof(int) * 100);
-//	str = ft_malloc(sizeof(int) * 1000);
-//	str = ft_malloc(sizeof(int) * 10000);
-//	str = ft_malloc(sizeof(int) * 20000);
-//	str = ft_malloc(sizeof(int) * 1000000);
-//	str = ft_malloc(sizeof(int) * 20000);
-//	str = ft_malloc(sizeof(int) * 10000);
-//	str = ft_malloc(sizeof(int) * 1000);
-//	str = ft_malloc(sizeof(int) * 100);
-//	str = ft_malloc(sizeof(int) * 2);
-	int y;
-
-	y = 0;
-//	while (i < 3)
-//	{
-//		printf("\nnb : %d\n", i);
-		str = malloc(16 * 10 * 10);
-		printf("\nadresse str %p\n", str);
-		printf("\nnb : %d\n", i);
-		tmp = list;
-		free(str);
-		ptr = malloc(120 * 10 * 10);
-		printf("\nadresse ptr %p\n", ptr);
-//		ft_free(str);
-//	y = 0;
-///		while (y < 20)
-//		{
-//			str[y] = 1;
-///			printf("\nchiffre : %d\n", str[y]);
-//			y++;
-//		}
-//		i++;
-//	}
-	i = 0;
-//	while (i < 69536)
-//	{
-//		list->start++;
-//		i++;
-//	}
-//		printf("\nadresses fin %p\n", list->start++);
-	i = 0;
-	//trouver pourquoi segfault si 655 et si plus de 100 appel
-//	free(ptr);
-//	free(str);
-//		printf("\nnb : %d\n", i);
-		str = malloc(250);
-		printf("\nadresse str %p\n", str);
-		ptr = malloc(1);
-		printf("\nadresse ptr %p\n", ptr);
-free(ptr);
-			str = malloc(2);
-		printf("\nadresse str %p\n", str);
-free(str);
-		str = malloc(3);
-		printf("\nadresse str %p\n", str);
-free(str);
-		str = malloc(4);
-		printf("\nadresse str %p\n", str);
-free(str);
-	str = malloc(5);
-		printf("\nadresse str %p\n", str);
-free(str);
-		str = malloc(6);
-		printf("\nadresse str %p\n", str);
-free(str);
-	str = malloc(7);
-		printf("\nadresse str %p\n", str);
-free(str);
-		str = malloc(8);
-		printf("\nadresse str %p\n", str);
-free(str);
-			str = malloc(9);
-		printf("\nadresse str %p\n", str);
-free(str);
-		str = malloc(10);
-		printf("\nadresse str %p\n", str);
-free(str);
-		str = malloc(9000);
-		printf("\nadresse str %p\n", str);
-		ptr = malloc(9005);
-		printf("\nadresse ptr %p\n", ptr);
-		ptr = realloc(ptr, 8000);
-		str = realloc(str, 8500);
-//		ft_malloc(8000);
-//		ft_free(ptr);
-//		str = ft_malloc(10);
-//		printf("\nadresse str %p\n", str);
-//		printf("\nadresse ptr %p\n", ptr);
-	list = tmp;
-	while (list != NULL)
-	{
-		printf("\nadresse %p\n", list);
-//		i = 0;
-//		while (i++ < 56)
-//			printf("\nadresse %p\n", list->start--);
-		printf("\nlist sortie %p\n", list->start);
-		printf("\nlist free %d\n", list->isfree);
-		i++;
-//		while (i < 32)
-//		{
-//			printf(" %p\n", list->start++);
-//			i++;
-//		}
-		printf("type %d\n", list->type);
-		printf("floor %d\n", list->floor);
-		printf("size %lu\n", list->size);
-//		if (list->next != NULL)
-			list = list->next;
-//		else
-//			break;
-	}
-	list = tmp;
-	i = 0;
-//	while (i < 36)
-//	{
-//		printf("\nadresses dispos %p\n", list->start++);
-//		i++;
-//	}
-	printf("\nnobre de tours : %d\n", i);
-	printf("\nsize get page 16 / 100 : %d\n", 16 * getpagesize() / 100);
-	printf("\nsize get page 4 / 100  : %d\n", 4 * getpagesize()/ 100);
-	printf("\nsize get page 16  : %d\n", 16 * getpagesize());
-	printf("\nsize get page 4  : %d\n", 4 * getpagesize());
-	printf("\nsize get page 16 + sizeof(t_list) * 100 : %lu\n", 16 * getpagesize() +sizeof(t_list) * 100 );
-	printf("\nsize get page 4 + sizeof(t_list) * 100  : %lu\n", 4 * getpagesize() +sizeof(t_list) * 100 );
-//	str = malloc(sizeof(int) * 2);
-//	str[0] = 544;
-//	str[1] = 5454;
-//	str[2] = 64584;
-//	printf("%d%d%d", str[0], str[1], str[2]);
-//	str = malloc(8);
-//	list = tmp;;
-//	ft_free(str);
-//	list = tmp;
-	//trouver pourquoi c tjr la premiere adresse qui free
-}*/

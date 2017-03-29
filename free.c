@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/14 15:04:08 by droly             #+#    #+#             */
-/*   Updated: 2017/03/27 13:59:41 by droly            ###   ########.fr       */
+/*   Updated: 2017/03/29 18:05:06 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ int			find_start(int floor, t_list *tmp2)
 	{
 		while (list != NULL && list->floor == floor)
 			list = list->next;
-//		printf("\nhey\n");
 		return (1);
 	}
 	while (list != NULL && list->next->floor != floor)
@@ -52,14 +51,12 @@ int			check_unmap(t_list *tmp3)
 	check = 0;
 	while (list != NULL)
 	{
-//		printf("\nniktamer\n");
 		floor = list->floor;
 		tmp = list;
 		while (list->next != NULL && floor == list->floor)
 		{
 			if (list->isfree == 1)
 			{
-//				printf("\nserieux\n");
 				check = 1;
 				while (list->next != NULL && list->floor == floor)
 					list = list->next;
@@ -72,18 +69,15 @@ int			check_unmap(t_list *tmp3)
 			check = 1;
 		if (check == 0 && list->type == 0 && i >= 10)
 		{
-//			printf("\nserieux2\n");
 			tmp3 = list;
 			i2 = find_start(list->floor, tmp2);
 			munmap(tmp, ((4 * getpagesize()) + (sizeof(t_list) * 100)));
 			if (tmp2 && i2 == 0)
 				list = tmp2;
-//			printf("\ns?\n");
 			return (i2);
 		}
 		if (check == 0 && list->type == 1 && i >= 10)
 		{
-//			printf("\nserieux3\n");
 			tmp3 = list;
 			find_start(list->floor, tmp2);
 			munmap(tmp, ((16 * getpagesize()) + (sizeof(t_list) * 100)));
@@ -96,10 +90,11 @@ int			check_unmap(t_list *tmp3)
 			list = list->next;
 		i = 0;
 	}
-//	printf("test de merde%d", tmp2->isfree);
 	list = tmp2;
 	return (0);
 }
+
+//commande cat segfault dans free, commande ls / segfault quelque part, commande htop possible que ce soit calloc, quoi que c possible que ce soit realoc, faire calloc, et etre fixer
 
 void		free(void *ptr)
 {
@@ -109,27 +104,21 @@ void		free(void *ptr)
 
 	i = 0;
 	tmp3 = NULL;
+	ft_putstr("\nfree\n");
 	if (list && ptr)
 	{
 		tmp2 = list;
 		while (list != NULL)
 		{
-//			printf("\nadresses dispos %p\n", list->start);
-//			printf("\nadresses de tamer la put %p\n", ptr);
 			if (list->start == ptr)
 			{
-//				printf("\nslt c 1 test\n");
 				list->isfree = 0;
 				if (list->type == 2)
 				{
-//					printf("\nserieux4\n");
 					tmp3 = list;
 					find_start(list->floor, tmp2);
-//					printf("\ntmp3->floor: %d\n", tmp3->floor);
-//					printf("\ntmp3->size: %lu\n", tmp3->size);
 					munmap(tmp3, tmp3->size + sizeof(t_list) + 1);
-//				printf("\nouah\n");
-				i = 1;//g modfie ca
+					i = 1;
 				}
 				else
 				{
@@ -137,15 +126,13 @@ void		free(void *ptr)
 					i = check_unmap(tmp3);
 				}
 				if (i == 0)
-				{
-//					printf("\netst\n");
 					list = tmp2;
-				}
-//				printf("\nouah\n");
+				ft_putstr("\nfree out\n");
 				return ;
 			}
 			list = list->next;
 		}
 		check_unmap(tmp3);
 	}
+	ft_putstr("\nfree out 2\n");
 }
