@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/20 16:12:30 by droly             #+#    #+#             */
-/*   Updated: 2017/03/29 18:02:19 by droly            ###   ########.fr       */
+/*   Updated: 2017/03/30 17:41:15 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 int				check_free(t_list *list, size_t size, t_list *tmp2)
 {
+	ft_putstr("\nmalloc check_free\n");
 	while (list != NULL)
 	{
 		if (list->isfree == 0 && list->size >= size)
@@ -35,6 +36,7 @@ int				check_free(t_list *list, size_t size, t_list *tmp2)
 
 void			*begin_new2(int num, t_list *tmp)
 {
+	ft_putstr("\nmalloc begin_new2\n");
 	if (num <= 16)
 	{
 		if ((tmp = mmap(0, ((num * getpagesize()) + (sizeof(t_list) *
@@ -56,6 +58,7 @@ t_list			*begin_new(t_list *list, int num, size_t size, int type)
 	void		*tmp;
 	static int	i = 0;
 
+	ft_putstr("\nmalloc begin_new\n");
 	tmp = begin_new2(num, NULL);
 	list = tmp;
 	list->start = &tmp[sizeof(t_list)];
@@ -75,6 +78,7 @@ t_list			*begin_new(t_list *list, int num, size_t size, int type)
 
 t_list			*check_size(t_list *list, size_t size)
 {
+	ft_putstr("\nmalloc check size\n");
 	if (size <= (unsigned long)((4 * getpagesize()) / 100))
 	{
 		list = begin_new(list, 4, size, 0);

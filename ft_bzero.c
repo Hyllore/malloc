@@ -6,11 +6,11 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 14:53:24 by droly             #+#    #+#             */
-/*   Updated: 2015/12/03 18:50:49 by droly            ###   ########.fr       */
+/*   Updated: 2017/03/30 15:05:59 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "malloc.h"
 
 void	ft_bzero(void *s, size_t n)
 {

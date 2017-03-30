@@ -6,11 +6,32 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/22 16:57:28 by droly             #+#    #+#             */
-/*   Updated: 2017/03/29 18:00:24 by droly            ###   ########.fr       */
+/*   Updated: 2017/03/30 17:17:33 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "malloc.h"
+
+void		*calloc(size_t count, size_t size)
+{
+	void *ptr;
+
+		ft_putstr("\ncalloc enter\n");
+	if (count == 0 || size == 0)
+	{
+		ft_putstr("\ncalloc out 2\n");
+		return (NULL);
+	}
+	ptr = malloc(count * size);
+	if (ptr == NULL)
+	{
+		ft_putstr("\ncalloc out 3\n");
+		return (NULL);
+	}
+	ft_bzero(ptr, count * size);
+	ft_putstr("\ncalloc out 4\n");
+	return (ptr);
+}
 
 void		*copy_void(void *ptr, void *tmp2, size_t size, size_t old_size)
 {
@@ -47,9 +68,10 @@ void		*realloc(void *ptr, size_t size)
 	showadd(ptr);
 	if (!ptr)
 	{
+		ft_putstr("\nrealloc out 5\n");
 		ptr = malloc(size);
 		list = tmp;
-		return (tmp);
+		return (ptr);
 	}
 	while (list != NULL && list->start != ptr)
 	{
@@ -65,9 +87,10 @@ void		*realloc(void *ptr, size_t size)
 	}
 	if (size == 0)
 	{
+		list = tmp;
 		free(ptr);
 		ft_putstr("\nrealloc out 3\n");
-		list = tmp;
+//	list = tmp;
 		return (NULL);
 	}
 	if (size != list->size)
@@ -76,7 +99,7 @@ void		*realloc(void *ptr, size_t size)
 		tmp2 = malloc(size);
 		tmp2 = copy_void(ptr, tmp2, size, list->size);
 		free(ptr);
-		list = tmp;
+//		list = tmp;
 		ft_putstr("\nrealloc out 4\n");
 		return (tmp2);
 	}
