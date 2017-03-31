@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/24 17:21:29 by droly             #+#    #+#             */
-/*   Updated: 2017/03/29 17:45:33 by droly            ###   ########.fr       */
+/*   Updated: 2017/03/31 13:34:48 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ malloc(1024);
 								    return (0);
 }*/
 
-int        main(void)
+/*int        main(void)
 {
     int            i;
 	int i2;
@@ -76,11 +76,11 @@ int        main(void)
 //	printf("hey");
 	ft_putnbr(t);
 	return (0);
-}
+}*/
 //getrlimit voir pour gerer les erreurs, et trouver pk ca segfault comme un fils de pute de sa mere la tinp
 
 
-/*int				main(void)
+int				main(void)
 {
 	int			*str;
 	int			*ptr;
@@ -231,4 +231,4 @@ free(str);
 //	ft_free(str);
 //	list = tmp;
 	//trouver pourquoi c tjr la premiere adresse qui free
-}*/
+}

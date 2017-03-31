@@ -3,11 +3,53 @@ malloc
 
 malloc start
 
+malloc check size
+
+malloc begin_new
+
+malloc begin_new2
+
+malloc split_mem
+
 malloc out
 
 malloc
 
+malloc check_free
+
 malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:0
+list->isfree:1
+list->size:8
+
+list->type:0
+list->floor:0
+list->isfree:0
+list->size:20336
+20336
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
 
 free
 
@@ -16,18 +58,115 @@ free 1er if
 free while
 
 free 2eme if
-
+0
 free else
+
+entre
+
+tourne
+
+tourne
+
+check
+
+fin
+
+entre
+
+fin
 
 free out
 
 malloc
 
+malloc check_free
+
 malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:0
+list->isfree:0
+list->size:8
+
+list->type:0
+list->floor:0
+list->isfree:1
+list->size:16
+
+list->type:0
+list->floor:0
+list->isfree:0
+list->size:20280
+20280
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
 
 malloc
 
+malloc check_free
+
 malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:0
+list->isfree:0
+list->size:8
+
+list->type:0
+list->floor:0
+list->isfree:1
+list->size:16
+
+list->type:0
+list->floor:0
+list->isfree:1
+list->size:16
+
+list->type:0
+list->floor:0
+list->isfree:0
+list->size:20224
+20224
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
 
 free
 
@@ -81,11 +220,53 @@ malloc
 
 malloc start
 
+malloc check size
+
+malloc begin_new
+
+malloc begin_new2
+
+malloc split_mem
+
 malloc out
 
 malloc
 
+malloc check_free
+
 malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:1
+list->isfree:1
+list->size:32
+
+list->type:0
+list->floor:1
+list->isfree:0
+list->size:20312
+20312
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
 
 free
 
@@ -115,415 +296,279 @@ free out of while
 
 free out 2
 
-free
-
-free out 2
+calloc enter
 
 malloc
 
 malloc start
 
-malloc out
+malloc check size
 
-free
+malloc begin_new
 
-free 1er if
+malloc begin_new2
 
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free out of while
-
-free out of while
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-malloc
-
-malloc start
+malloc split_mem
 
 malloc out
 
-malloc
+calloc out 4
 
-malloc out 3
-
-malloc
-
-malloc out 3
+calloc enter
 
 malloc
 
+malloc check_free
+
 malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:2
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:2
+list->isfree:0
+list->size:20280
+20280
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
 
 malloc
 
+malloc check_free
+
 malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:2
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:2
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:2
+list->isfree:0
+list->size:20176
+20176
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
 
 malloc
 
+malloc check_free
+
 malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:2
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:2
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:2
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:2
+list->isfree:0
+list->size:20072
+20072
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
 
 malloc
 
+malloc check_free
+
 malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:2
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:2
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:2
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:2
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:2
+list->isfree:0
+list->size:19968
+19968
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
 
 malloc
 
-malloc out 3
-
-malloc
+malloc check_free
 
 malloc out 3
 
-malloc
+malloc add_new
 
-malloc out 3
+list->type:0
+list->floor:2
+list->isfree:1
+list->size:64
 
-malloc
+list->type:0
+list->floor:2
+list->isfree:1
+list->size:64
 
-malloc out 3
+list->type:0
+list->floor:2
+list->isfree:1
+list->size:64
 
-malloc
+list->type:0
+list->floor:2
+list->isfree:1
+list->size:64
 
-malloc out 3
+list->type:0
+list->floor:2
+list->isfree:1
+list->size:64
 
-malloc
+list->type:0
+list->floor:2
+list->isfree:0
+list->size:19864
+19864
+malloc add_new3
 
-malloc out 3
+malloc add_new3 fin 2
 
-malloc
+malloc add_new3 fin 3
 
-malloc out 3
+malloc add_new3 fin 4
 
-malloc
+malloc add_new3 fin 5
 
-malloc out 3
+malloc add_new3 fin 6
 
-malloc
+malloc add_new3 fin 7
 
-malloc out 3
+malloc add_new3 fin 8
 
-malloc
+malloc add_new3 fin 9
 
-malloc out 3
-
-malloc
-
-malloc out 3
+malloc add_new3 fin
 
 free
 
@@ -571,6 +616,888 @@ free next avant
 
 free next apres
 
+free out of while
+
+free out of while
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+calloc enter
+
+malloc
+
+malloc start
+
+malloc check size
+
+malloc begin_new
+
+malloc begin_new2
+
+malloc split_mem
+
+malloc out
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:0
+list->size:20280
+20280
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:0
+list->size:20176
+20176
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:0
+list->size:20072
+20072
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:0
+list->size:19968
+19968
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:0
+list->size:19864
+19864
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:0
+list->size:19760
+19760
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:0
+list->size:19656
+19656
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:0
+list->size:19552
+19552
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:0
+list->size:19448
+19448
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:0
+list->size:19344
+19344
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:0
+list->size:19240
+19240
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:3
+list->isfree:0
+list->size:19136
+19136
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+free
+
+free 1er if
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
 free while
 
 free next avant
@@ -649,29 +1576,10692 @@ free out of while
 
 free out 2
 
+calloc enter
+
 malloc
 
 malloc start
 
+malloc check size
+
+malloc begin_new
+
+malloc begin_new2
+
+malloc split_mem
+
 malloc out
 
-malloc
+calloc out 4
 
-malloc out 3
-
-malloc
-
-malloc out 3
+calloc enter
 
 malloc
 
+malloc check_free
+
 malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:4
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:4
+list->isfree:0
+list->size:20280
+20280
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+free
+
+free 1er if
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free out of while
+
+free out of while
+
+free out 2
+
+calloc enter
+
+malloc
+
+malloc start
+
+malloc check size
+
+malloc begin_new
+
+malloc begin_new2
+
+malloc split_mem
+
+malloc out
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:5
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:5
+list->isfree:0
+list->size:20280
+20280
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:5
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:5
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:5
+list->isfree:0
+list->size:20176
+20176
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:5
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:5
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:5
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:5
+list->isfree:0
+list->size:20072
+20072
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:5
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:5
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:5
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:5
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:5
+list->isfree:0
+list->size:19968
+19968
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:5
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:5
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:5
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:5
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:5
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:5
+list->isfree:0
+list->size:19864
+19864
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:5
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:5
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:5
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:5
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:5
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:5
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:5
+list->isfree:0
+list->size:19760
+19760
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:5
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:5
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:5
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:5
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:5
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:5
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:5
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:5
+list->isfree:0
+list->size:19656
+19656
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+free
+
+free 1er if
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free out of while
+
+free out of while
+
+free out 2
+
+calloc enter
+
+malloc
+
+malloc start
+
+malloc check size
+
+malloc begin_new
+
+malloc begin_new2
+
+malloc split_mem
+
+malloc out
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:6
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:6
+list->isfree:0
+list->size:20280
+20280
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+free
+
+free 1er if
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free out of while
+
+free out of while
+
+free out 2
+
+calloc enter
+
+malloc
+
+malloc start
+
+malloc check size
+
+malloc begin_new
+
+malloc begin_new2
+
+malloc split_mem
+
+malloc out
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:7
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:7
+list->isfree:0
+list->size:20280
+20280
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+free
+
+free 1er if
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free out of while
+
+free out of while
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+calloc enter
+
+malloc
+
+malloc start
+
+malloc check size
+
+malloc begin_new
+
+malloc begin_new2
+
+malloc split_mem
+
+malloc out
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:0
+list->size:20280
+20280
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:0
+list->size:20176
+20176
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:0
+list->size:20072
+20072
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:0
+list->size:19968
+19968
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:0
+list->size:19864
+19864
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:0
+list->size:19760
+19760
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:0
+list->size:19656
+19656
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:0
+list->size:19552
+19552
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:0
+list->size:19448
+19448
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:8
+list->isfree:0
+list->size:19344
+19344
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+free
+
+free 1er if
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free out of while
+
+free out of while
+
+free out 2
+
+calloc enter
+
+malloc
+
+malloc start
+
+malloc check size
+
+malloc begin_new
+
+malloc begin_new2
+
+malloc split_mem
+
+malloc out
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:0
+list->size:20280
+20280
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:0
+list->size:20176
+20176
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:0
+list->size:20072
+20072
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:0
+list->size:19968
+19968
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:0
+list->size:19864
+19864
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:0
+list->size:19760
+19760
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:0
+list->size:19656
+19656
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:0
+list->size:19552
+19552
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:0
+list->size:19448
+19448
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:0
+list->size:19344
+19344
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:0
+list->size:19240
+19240
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:9
+list->isfree:0
+list->size:19136
+19136
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+free
+
+free 1er if
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free out of while
+
+free out of while
+
+free out 2
+
+calloc enter
+
+malloc
+
+malloc start
+
+malloc check size
+
+malloc begin_new
+
+malloc begin_new2
+
+malloc split_mem
+
+malloc out
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:0
+list->size:20280
+20280
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:0
+list->size:20176
+20176
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:0
+list->size:20072
+20072
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:0
+list->size:19968
+19968
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:0
+list->size:19864
+19864
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:0
+list->size:19760
+19760
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:0
+list->size:19656
+19656
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:0
+list->size:19552
+19552
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:0
+list->size:19448
+19448
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:0
+list->size:19344
+19344
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:0
+list->size:19240
+19240
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:0
+list->size:19136
+19136
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:10
+list->isfree:0
+list->size:19032
+19032
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+free
+
+free 1er if
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free out of while
+
+free out of while
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+calloc enter
+
+malloc
+
+malloc start
+
+malloc check size
+
+malloc begin_new
+
+malloc begin_new2
+
+malloc split_mem
+
+malloc out
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:11
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:11
+list->isfree:0
+list->size:20280
+20280
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+free
+
+free 1er if
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free out of while
+
+free out of while
+
+free out 2
+
+calloc enter
+
+malloc
+
+malloc start
+
+malloc check size
+
+malloc begin_new
+
+malloc begin_new2
+
+malloc split_mem
+
+malloc out
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:12
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:12
+list->isfree:0
+list->size:20280
+20280
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+free
+
+free 1er if
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free out of while
+
+free out of while
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+free
+
+free out 2
+
+calloc enter
+
+malloc
+
+malloc start
+
+malloc check size
+
+malloc begin_new
+
+malloc begin_new2
+
+malloc split_mem
+
+malloc out
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:13
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:13
+list->isfree:0
+list->size:20280
+20280
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+free
+
+free 1er if
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free out of while
+
+free out of while
+
+free out 2
+
+free
+
+free out 2
+
+calloc enter
+
+malloc
+
+malloc start
+
+malloc check size
+
+malloc begin_new
+
+malloc begin_new2
+
+malloc split_mem
+
+malloc out
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:14
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:14
+list->isfree:0
+list->size:20280
+20280
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+free
+
+free 1er if
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free out of while
+
+free out of while
+
+free out 2
+
+free
+
+free out 2
+
+calloc enter
+
+malloc
+
+malloc start
+
+malloc check size
+
+malloc begin_new
+
+malloc begin_new2
+
+malloc split_mem
+
+malloc out
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:15
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:15
+list->isfree:0
+list->size:20280
+20280
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:15
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:15
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:15
+list->isfree:0
+list->size:20176
+20176
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:15
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:15
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:15
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:15
+list->isfree:0
+list->size:20072
+20072
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+free
+
+free 1er if
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free out of while
+
+free out of while
+
+free out 2
+
+free
+
+free out 2
+
+calloc enter
+
+malloc
+
+malloc start
+
+malloc check size
+
+malloc begin_new
+
+malloc begin_new2
+
+malloc split_mem
+
+malloc out
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:16
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:16
+list->isfree:0
+list->size:20280
+20280
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+free
+
+free 1er if
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free out of while
+
+free out of while
+
+free out 2
+
+free
+
+free out 2
+
+calloc enter
+
+malloc
+
+malloc start
+
+malloc check size
+
+malloc begin_new
+
+malloc begin_new2
+
+malloc split_mem
+
+malloc out
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:17
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:17
+list->isfree:0
+list->size:20280
+20280
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+free
+
+free 1er if
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free out of while
+
+free out of while
+
+free out 2
+
+free
+
+free out 2
+
+calloc enter
+
+malloc
+
+malloc start
+
+malloc check size
+
+malloc begin_new
+
+malloc begin_new2
+
+malloc split_mem
+
+malloc out
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:18
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:18
+list->isfree:0
+list->size:20280
+20280
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+free
+
+free 1er if
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free out of while
+
+free out of while
+
+free out 2
+
+calloc enter
+
+malloc
+
+malloc start
+
+malloc check size
+
+malloc begin_new
+
+malloc begin_new2
+
+malloc split_mem
+
+malloc out
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:0
+list->size:20280
+20280
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:0
+list->size:20176
+20176
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:0
+list->size:20072
+20072
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:0
+list->size:19968
+19968
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:0
+list->size:19864
+19864
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:0
+list->size:19760
+19760
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:0
+list->size:19656
+19656
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:0
+list->size:19552
+19552
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:0
+list->size:19448
+19448
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:0
+list->size:19344
+19344
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:8
+
+list->type:0
+list->floor:19
+list->isfree:0
+list->size:19296
+19296
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:8
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:0
+list->size:19128
+19128
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:8
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:27
+
+list->type:0
+list->floor:19
+list->isfree:0
+list->size:19061
+19061
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:8
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:27
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:0
+list->size:18965
+18965
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:8
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:27
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:0
+list->size:18861
+18861
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:8
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:27
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:0
+list->size:18693
+18693
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:8
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:27
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:22
+
+list->type:0
+list->floor:19
+list->isfree:0
+list->size:18631
+18631
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc begin new
+
+malloc check size
+
+malloc begin_new
+
+malloc begin_new2
+
+malloc split_mem
+
+malloc out
+
+calloc out 4
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:8
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:27
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:22
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:72
+
+list->type:0
+list->floor:19
+list->isfree:0
+list->size:18519
+
+malloc add_new2`
+
+malloc add_new2`fklsrjknv
+
+malloc add_new2 fin
+
+malloc add_new2 fin 2
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:13
+
+malloc add_new2 fin 2
+
+list->next->type:0
+list->next->floor:19
+list->next->isfree:0
+list->next->size:18466
+
+tmp2->type:0
+tmp2->floor:19
+tmp2->isfree:1
+tmp2->size:64
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:8
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:27
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:22
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:72
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:13
+
+list->type:0
+list->floor:19
+list->isfree:0
+list->size:18466
+
+malloc add_new2`
+
+malloc add_new2`fklsrjknv
+
+malloc add_new2 fin
+
+malloc add_new2 fin 2
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+malloc add_new2 fin 2
+
+list->next->type:0
+list->next->floor:19
+list->next->isfree:0
+list->next->size:18370
+
+tmp2->type:0
+tmp2->floor:19
+tmp2->isfree:1
+tmp2->size:64
+
+calloc out 4
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:8
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:27
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:22
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:72
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:13
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:0
+list->size:18370
+
+malloc add_new2`
+
+malloc add_new2`fklsrjknv
+
+malloc add_new2 fin
+
+malloc add_new2 fin 2
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:45
+
+malloc add_new2 fin 2
+
+list->next->type:0
+list->next->floor:19
+list->next->isfree:0
+list->next->size:18285
+
+tmp2->type:0
+tmp2->floor:19
+tmp2->isfree:1
+tmp2->size:64
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:8
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:27
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:22
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:72
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:13
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:45
+
+list->type:0
+list->floor:19
+list->isfree:0
+list->size:18285
+
+malloc add_new2`
+
+malloc add_new2`fklsrjknv
+
+malloc add_new2 fin
+
+malloc add_new2 fin 2
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:62
+
+malloc add_new2 fin 2
+
+list->next->type:0
+list->next->floor:19
+list->next->isfree:0
+list->next->size:18183
+
+tmp2->type:0
+tmp2->floor:19
+tmp2->isfree:1
+tmp2->size:64
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:8
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:27
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:22
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:72
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:13
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:45
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:62
+
+list->type:0
+list->floor:19
+list->isfree:0
+list->size:18183
+
+malloc add_new2`
+
+malloc add_new2`fklsrjknv
+
+malloc add_new2 fin
+
+malloc add_new2 fin 2
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+malloc add_new2 fin 2
+
+list->next->type:0
+list->next->floor:19
+list->next->isfree:0
+list->next->size:18087
+
+tmp2->type:0
+tmp2->floor:19
+tmp2->isfree:1
+tmp2->size:64
+
+calloc out 4
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:8
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:27
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:22
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:72
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:13
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:45
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:62
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:0
+list->size:18087
+
+malloc add_new2`
+
+malloc add_new2`fklsrjknv
+
+malloc add_new2 fin
+
+malloc add_new2 fin 2
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:45
+
+malloc add_new2 fin 2
+
+list->next->type:0
+list->next->floor:19
+list->next->isfree:0
+list->next->size:18002
+
+tmp2->type:0
+tmp2->floor:19
+tmp2->isfree:1
+tmp2->size:64
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:8
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:27
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:22
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:72
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:13
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:45
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:62
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:45
+
+list->type:0
+list->floor:19
+list->isfree:0
+list->size:18002
+
+malloc add_new2`
+
+malloc add_new2`fklsrjknv
+
+malloc add_new2 fin
+
+malloc add_new2 fin 2
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:50
+
+malloc add_new2 fin 2
+
+list->next->type:0
+list->next->floor:19
+list->next->isfree:0
+list->next->size:17912
+
+tmp2->type:0
+tmp2->floor:19
+tmp2->isfree:1
+tmp2->size:64
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:8
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:27
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:22
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:72
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:13
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:45
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:62
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:45
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:50
+
+list->type:0
+list->floor:19
+list->isfree:0
+list->size:17912
+
+malloc add_new2`
+
+malloc add_new2`fklsrjknv
+
+malloc add_new2 fin
+
+malloc add_new2 fin 2
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+malloc add_new2 fin 2
+
+list->next->type:0
+list->next->floor:19
+list->next->isfree:0
+list->next->size:17816
+
+tmp2->type:0
+tmp2->floor:19
+tmp2->isfree:1
+tmp2->size:64
+
+calloc out 4
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:8
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:27
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:22
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:72
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:13
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:45
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:62
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:45
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:50
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:0
+list->size:17816
+
+malloc add_new2`
+
+malloc add_new2`fklsrjknv
+
+malloc add_new2 fin
+
+malloc add_new2 fin 2
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:47
+
+malloc add_new2 fin 2
+
+list->next->type:0
+list->next->floor:19
+list->next->isfree:0
+list->next->size:17729
+
+tmp2->type:0
+tmp2->floor:19
+tmp2->isfree:1
+tmp2->size:64
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:8
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:27
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:22
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:72
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:13
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:45
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:62
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:45
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:50
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:47
+
+list->type:0
+list->floor:19
+list->isfree:0
+list->size:17729
+
+malloc add_new2`
+
+malloc add_new2`fklsrjknv
+
+malloc add_new2 fin
+
+malloc add_new2 fin 2
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:11
+
+malloc add_new2 fin 2
+
+list->next->type:0
+list->next->floor:19
+list->next->isfree:0
+list->next->size:17678
+
+tmp2->type:0
+tmp2->floor:19
+tmp2->isfree:1
+tmp2->size:64
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:8
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:27
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:22
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:72
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:13
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:45
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:62
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:45
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:50
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:47
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:11
+
+list->type:0
+list->floor:19
+list->isfree:0
+list->size:17678
+
+malloc add_new2`
+
+malloc add_new2`fklsrjknv
+
+malloc add_new2 fin
+
+malloc add_new2 fin 2
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+malloc add_new2 fin 2
+
+list->next->type:0
+list->next->floor:19
+list->next->isfree:0
+list->next->size:17582
+
+tmp2->type:0
+tmp2->floor:19
+tmp2->isfree:1
+tmp2->size:64
+
+calloc out 4
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:8
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:27
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:22
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:72
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:13
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:45
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:62
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:45
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:50
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:47
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:11
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:0
+list->size:17582
+
+malloc add_new2`
+
+malloc add_new2`fklsrjknv
+
+malloc add_new2 fin
+
+malloc add_new2 fin 2
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+malloc add_new2 fin 2
+
+list->next->type:0
+list->next->floor:19
+list->next->isfree:0
+list->next->size:17478
+
+tmp2->type:0
+tmp2->floor:19
+tmp2->isfree:1
+tmp2->size:64
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:8
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:27
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:22
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:72
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:13
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:45
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:62
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:45
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:50
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:47
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:11
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:0
+list->size:17478
+
+malloc add_new2`
+
+malloc add_new2`fklsrjknv
+
+malloc add_new2 fin
+
+malloc add_new2 fin 2
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:49
+
+malloc add_new2 fin 2
+
+list->next->type:0
+list->next->floor:19
+list->next->isfree:0
+list->next->size:17389
+
+tmp2->type:0
+tmp2->floor:19
+tmp2->isfree:1
+tmp2->size:64
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:8
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:27
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:22
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:72
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:13
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:45
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:62
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:45
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:50
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:47
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:11
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:49
+
+list->type:0
+list->floor:19
+list->isfree:0
+list->size:17389
+
+malloc add_new2`
+
+malloc add_new2`fklsrjknv
+
+malloc add_new2 fin
+
+malloc add_new2 fin 2
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+malloc add_new2 fin 2
+
+list->next->type:0
+list->next->floor:19
+list->next->isfree:0
+list->next->size:17293
+
+tmp2->type:0
+tmp2->floor:19
+tmp2->isfree:1
+tmp2->size:64
+
+calloc out 4
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:8
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:27
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:22
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:72
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:13
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:45
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:62
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:45
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:50
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:47
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:11
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:49
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:0
+list->size:17293
+
+malloc add_new2`
+
+malloc add_new2`fklsrjknv
+
+malloc add_new2 fin
+
+malloc add_new2 fin 2
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:67
+
+malloc add_new2 fin 2
+
+list->next->type:0
+list->next->floor:19
+list->next->isfree:0
+list->next->size:17186
+
+tmp2->type:0
+tmp2->floor:19
+tmp2->isfree:1
+tmp2->size:64
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:8
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:27
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:22
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:72
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:13
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:45
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:62
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:45
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:50
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:47
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:11
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:49
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:67
+
+list->type:0
+list->floor:19
+list->isfree:0
+list->size:17186
+
+malloc add_new2`
+
+malloc add_new2`fklsrjknv
+
+malloc add_new2 fin
+
+malloc add_new2 fin 2
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:52
+
+malloc add_new2 fin 2
+
+list->next->type:0
+list->next->floor:19
+list->next->isfree:0
+list->next->size:17094
+
+tmp2->type:0
+tmp2->floor:19
+tmp2->isfree:1
+tmp2->size:64
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:8
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:27
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:22
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:72
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:13
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:45
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:62
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:45
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:50
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:47
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:11
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:49
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:67
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:52
+
+list->type:0
+list->floor:19
+list->isfree:0
+list->size:17094
+
+malloc add_new2`
+
+malloc add_new2`fklsrjknv
+
+malloc add_new2 fin
+
+malloc add_new2 fin 2
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+malloc add_new2 fin 2
+
+list->next->type:0
+list->next->floor:19
+list->next->isfree:0
+list->next->size:16998
+
+tmp2->type:0
+tmp2->floor:19
+tmp2->isfree:1
+tmp2->size:64
+
+calloc out 4
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:8
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:27
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:22
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:72
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:13
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:45
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:62
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:45
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:50
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:47
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:11
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:49
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:67
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:52
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:0
+list->size:16998
+
+malloc add_new2`
+
+malloc add_new2`fklsrjknv
+
+malloc add_new2 fin
+
+malloc add_new2 fin 2
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:54
+
+malloc add_new2 fin 2
+
+list->next->type:0
+list->next->floor:19
+list->next->isfree:0
+list->next->size:16904
+
+tmp2->type:0
+tmp2->floor:19
+tmp2->isfree:1
+tmp2->size:64
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:8
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:27
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:22
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:72
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:13
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:45
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:62
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:45
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:50
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:47
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:11
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:49
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:67
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:52
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:54
+
+list->type:0
+list->floor:19
+list->isfree:0
+list->size:16904
+
+malloc add_new2`
+
+malloc add_new2`fklsrjknv
+
+malloc add_new2 fin
+
+malloc add_new2 fin 2
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:12
+
+malloc add_new2 fin 2
+
+list->next->type:0
+list->next->floor:19
+list->next->isfree:0
+list->next->size:16852
+
+tmp2->type:0
+tmp2->floor:19
+tmp2->isfree:1
+tmp2->size:64
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:8
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:27
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:22
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:72
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:13
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:45
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:62
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:45
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:50
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:47
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:11
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:49
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:67
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:52
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:54
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:12
+
+list->type:0
+list->floor:19
+list->isfree:0
+list->size:16852
+
+malloc add_new2`
+
+malloc add_new2`fklsrjknv
+
+malloc add_new2 fin
+
+malloc add_new2 fin 2
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+malloc add_new2 fin 2
+
+list->next->type:0
+list->next->floor:19
+list->next->isfree:0
+list->next->size:16756
+
+tmp2->type:0
+tmp2->floor:19
+tmp2->isfree:1
+tmp2->size:64
+
+calloc out 4
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:8
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:27
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:22
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:72
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:13
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:45
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:62
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:45
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:50
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:47
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:11
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:49
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:67
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:52
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:54
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:12
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:0
+list->size:16756
+
+malloc add_new2`
+
+malloc add_new2`fklsrjknv
+
+malloc add_new2 fin
+
+malloc add_new2 fin 2
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:45
+
+malloc add_new2 fin 2
+
+list->next->type:0
+list->next->floor:19
+list->next->isfree:0
+list->next->size:16671
+
+tmp2->type:0
+tmp2->floor:19
+tmp2->isfree:1
+tmp2->size:64
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:8
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:27
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:128
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:22
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:72
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:13
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:45
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:62
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:45
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:50
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:47
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:11
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:49
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:67
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:52
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:54
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:12
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:56
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:45
+
+list->type:0
+list->floor:19
+list->isfree:0
+list->size:16671
+
+malloc add_new2`
+
+malloc add_new2`fklsrjknv
+
+malloc add_new2 fin
+
+malloc add_new2 fin 2
+
+list->type:0
+list->floor:19
+list->isfree:1
+list->size:32
+
+malloc add_new2 fin 2
+
+list->next->type:0
+list->next->floor:19
+list->next->isfree:0
+list->next->size:16599
+
+tmp2->type:0
+tmp2->floor:19
+tmp2->isfree:1
+tmp2->size:64
+
+free
+
+free 1er if
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free out of while
+
+free out of while
+
+free out 2
+
+calloc enter
+
+malloc
+
+malloc start
+
+malloc check size
+
+malloc begin_new
+
+malloc begin_new2
+
+malloc split_mem
+
+malloc out
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc begin new
+
+malloc check size
+
+malloc begin_new
+
+malloc begin_new2
+
+malloc split_mem
+
+malloc out
+
+calloc out 4
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:1
+list->floor:21
+list->isfree:1
+list->size:208
+
+list->type:1
+list->floor:21
+list->isfree:0
+list->size:69288
+
+list->type:0
+list->floor:22
+list->isfree:1
+list->size:48
+
+list->type:0
+list->floor:22
+list->isfree:0
+list->size:20296
+20296
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:1
+list->floor:21
+list->isfree:1
+list->size:208
+
+list->type:1
+list->floor:21
+list->isfree:0
+list->size:69288
+
+list->type:0
+list->floor:22
+list->isfree:1
+list->size:48
+
+list->type:0
+list->floor:22
+list->isfree:1
+list->size:88
+
+list->type:0
+list->floor:22
+list->isfree:0
+list->size:20168
+20168
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:1
+list->floor:21
+list->isfree:1
+list->size:208
+
+list->type:1
+list->floor:21
+list->isfree:0
+list->size:69288
+
+list->type:0
+list->floor:22
+list->isfree:1
+list->size:48
+
+list->type:0
+list->floor:22
+list->isfree:1
+list->size:88
+
+list->type:0
+list->floor:22
+list->isfree:1
+list->size:16
+
+list->type:0
+list->floor:22
+list->isfree:0
+list->size:20112
+20112
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:1
+list->floor:21
+list->isfree:1
+list->size:208
+
+list->type:1
+list->floor:21
+list->isfree:0
+list->size:69288
+
+list->type:0
+list->floor:22
+list->isfree:1
+list->size:48
+
+list->type:0
+list->floor:22
+list->isfree:1
+list->size:88
+
+list->type:0
+list->floor:22
+list->isfree:1
+list->size:16
+
+list->type:0
+list->floor:22
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:22
+list->isfree:0
+list->size:20008
+20008
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:1
+list->floor:21
+list->isfree:1
+list->size:208
+
+list->type:1
+list->floor:21
+list->isfree:0
+list->size:69288
+
+list->type:0
+list->floor:22
+list->isfree:1
+list->size:48
+
+list->type:0
+list->floor:22
+list->isfree:1
+list->size:88
+
+list->type:0
+list->floor:22
+list->isfree:1
+list->size:16
+
+list->type:0
+list->floor:22
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:22
+list->isfree:1
+list->size:14
+
+list->type:0
+list->floor:22
+list->isfree:0
+list->size:19954
+19954
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
+
+calloc out 4
+
+calloc enter
+
+malloc
+
+malloc check_free
+
+malloc out 3
+
+malloc add_new
+
+list->type:1
+list->floor:21
+list->isfree:1
+list->size:208
+
+list->type:1
+list->floor:21
+list->isfree:0
+list->size:69288
+
+malloc add_new2`
+
+malloc add_new2`fklsrjknv
+
+malloc add_new2 fin
+
+malloc add_new2 fin 2
+
+list->type:1
+list->floor:21
+list->isfree:1
+list->size:256
+
+malloc add_new2 fin 2
+
+list->next->type:1
+list->next->floor:21
+list->next->isfree:0
+list->next->size:68992
+
+tmp2->type:1
+tmp2->floor:21
+tmp2->isfree:1
+tmp2->size:208
+
+calloc out 4
 
 realloc
 c la --->
 malloc
 
+malloc check_free
+
 malloc out 3
+
+malloc add_new
+
+list->type:1
+list->floor:21
+list->isfree:1
+list->size:208
+
+list->type:1
+list->floor:21
+list->isfree:1
+list->size:256
+
+list->type:1
+list->floor:21
+list->isfree:0
+list->size:68992
+
+list->type:0
+list->floor:22
+list->isfree:1
+list->size:48
+
+list->type:0
+list->floor:22
+list->isfree:1
+list->size:88
+
+list->type:0
+list->floor:22
+list->isfree:1
+list->size:16
+
+list->type:0
+list->floor:22
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:22
+list->isfree:1
+list->size:14
+
+list->type:0
+list->floor:22
+list->isfree:1
+list->size:64
+
+list->type:0
+list->floor:22
+list->isfree:0
+list->size:19850
+19850
+malloc add_new3
+
+malloc add_new3 fin 2
+
+malloc add_new3 fin 3
+
+malloc add_new3 fin 4
+
+malloc add_new3 fin 5
+
+malloc add_new3 fin 6
+
+malloc add_new3 fin 7
+
+malloc add_new3 fin 8
+
+malloc add_new3 fin 9
+
+malloc add_new3 fin
 0
 free
 
@@ -703,9 +12293,59 @@ free next apres
 
 free while
 
-free 2eme if
+free next avant
 
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free 2eme if
+0
 free else
+
+entre
+
+tourne
+
+check
+
+fin
+
+entre
+
+tourne
+
+check
+
+fin
+
+entre
+
+fin
 
 free out
 
@@ -713,9 +12353,51 @@ realloc out 5
 
 malloc
 
-malloc begin new
+malloc check_free
 
-malloc out
+malloc out 3
+
+malloc add_new
+
+list->type:1
+list->floor:21
+list->isfree:1
+list->size:208
+
+list->type:1
+list->floor:21
+list->isfree:1
+list->size:256
+
+list->type:1
+list->floor:21
+list->isfree:0
+list->size:68992
+
+malloc add_new2`
+
+malloc add_new2`fklsrjknv
+
+malloc add_new2 fin
+
+malloc add_new2 fin 2
+
+list->type:1
+list->floor:21
+list->isfree:1
+list->size:256
+
+malloc add_new2 fin 2
+
+list->next->type:1
+list->next->floor:21
+list->next->isfree:0
+list->next->size:68696
+
+tmp2->type:1
+tmp2->floor:21
+tmp2->isfree:1
+tmp2->size:208
 
 free
 
@@ -735,45 +12417,117 @@ free next apres
 
 free while
 
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
 free 2eme if
-
+1
 free else
+
+entre
+
+tourne
+
+check
+
+fin
+
+entre
+
+tourne
+
+check
+
+fin
+
+entre
+
+fin
 
 free out
 
 malloc
 
+malloc check_free
+
 malloc begin new
+
+malloc check size
+
+malloc begin_new
+
+malloc begin_new2
+
+malloc split_mem
 
 malloc out
 
 malloc
 
+malloc start
+
+malloc check size
+
+malloc begin_new
+
+malloc begin_new2
+
+malloc split_mem
+
+malloc out
+
+free
+
+free 1er if
+
+free while
+
+free 2eme if
+2
+free 3er if
+
+---unmap floor ->0
+
+malloc
+
+malloc start
+
+malloc check size
+
+malloc begin_new
+
+malloc begin_new2
+
+malloc split_mem
+
+malloc out
+
+malloc
+
+malloc check_free
+
 malloc begin new
+
+malloc check size
+
+malloc begin_new
+
+malloc begin_new2
+
+malloc split_mem
+
+malloc out
+
+malloc
+
+malloc check_free
+
+malloc begin new
+
+malloc check size
+
+malloc begin_new
+
+malloc begin_new2
+
+malloc split_mem
 
 malloc out
 
@@ -801,15 +12555,56 @@ free next apres
 
 free while
 
-free next avant
+free 2eme if
+0
+free else
 
-free next apres
+entre
 
-free while
+tourne
 
-free next avant
+check
 
-free next apres
+fin
+
+entre
+
+tourne
+
+check
+
+fin
+
+entre
+
+tourne
+
+fin
+
+---unmap floor ->3
+---unmap floor ->1
+
+free out
+
+malloc
+
+malloc check_free
+
+malloc begin new
+
+malloc check size
+
+malloc begin_new
+
+malloc begin_new2
+
+malloc split_mem
+
+malloc out
+
+free
+
+free 1er if
 
 free while
 
@@ -832,18 +12627,633 @@ free next apres
 free while
 
 free 2eme if
+0
+free else
 
-free 3er if
+entre
+
+tourne
+
+check
+
+fin
+
+entre
+
+tourne
+
+check
+
+fin
+
+entre
+
+tourne
+
+fin
+
+---unmap floor ->4
+---unmap floor ->1
+
+free out
 
 malloc
 
+malloc check_free
+
 malloc begin new
+
+malloc check size
+
+malloc begin_new
+
+malloc begin_new2
+
+malloc split_mem
+
+malloc out
+
+free
+
+free 1er if
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free 2eme if
+0
+free else
+
+entre
+
+tourne
+
+check
+
+fin
+
+entre
+
+tourne
+
+check
+
+fin
+
+entre
+
+tourne
+
+fin
+
+---unmap floor ->5
+---unmap floor ->1
+
+free out
+
+malloc
+
+malloc check_free
+
+malloc begin new
+
+malloc check size
+
+malloc begin_new
+
+malloc begin_new2
+
+malloc split_mem
+
+malloc out
+
+free
+
+free 1er if
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free 2eme if
+0
+free else
+
+entre
+
+tourne
+
+check
+
+fin
+
+entre
+
+tourne
+
+check
+
+fin
+
+entre
+
+tourne
+
+fin
+
+---unmap floor ->6
+---unmap floor ->1
+
+free out
+
+malloc
+
+malloc check_free
+
+malloc begin new
+
+malloc check size
+
+malloc begin_new
+
+malloc begin_new2
+
+malloc split_mem
+
+malloc out
+
+free
+
+free 1er if
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free 2eme if
+0
+free else
+
+entre
+
+tourne
+
+check
+
+fin
+
+entre
+
+tourne
+
+check
+
+fin
+
+entre
+
+tourne
+
+fin
+
+---unmap floor ->7
+---unmap floor ->1
+
+free out
+
+malloc
+
+malloc check_free
+
+malloc begin new
+
+malloc check size
+
+malloc begin_new
+
+malloc begin_new2
+
+malloc split_mem
+
+malloc out
+
+free
+
+free 1er if
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free 2eme if
+0
+free else
+
+entre
+
+tourne
+
+check
+
+fin
+
+entre
+
+tourne
+
+check
+
+fin
+
+entre
+
+tourne
+
+fin
+
+---unmap floor ->8
+---unmap floor ->1
+
+free out
+
+malloc
+
+malloc check_free
+
+malloc begin new
+
+malloc check size
+
+malloc begin_new
+
+malloc begin_new2
+
+malloc split_mem
+
+malloc out
+
+free
+
+free 1er if
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free 2eme if
+0
+free else
+
+entre
+
+tourne
+
+check
+
+fin
+
+entre
+
+tourne
+
+check
+
+fin
+
+entre
+
+tourne
+
+fin
+
+---unmap floor ->9
+---unmap floor ->1
+
+free out
+
+malloc
+
+malloc check_free
+
+malloc begin new
+
+malloc check size
+
+malloc begin_new
+
+malloc begin_new2
+
+malloc split_mem
+
+malloc out
+
+free
+
+free 1er if
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free 2eme if
+0
+free else
+
+entre
+
+tourne
+
+check
+
+fin
+
+entre
+
+tourne
+
+check
+
+fin
+
+entre
+
+tourne
+
+fin
+
+---unmap floor ->10
+---unmap floor ->1
+
+free out
+
+malloc
+
+malloc check_free
+
+malloc begin new
+
+malloc check size
+
+malloc begin_new
+
+malloc begin_new2
+
+malloc split_mem
+
+malloc out
+
+free
+
+free 1er if
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free 2eme if
+0
+free else
+
+entre
+
+tourne
+
+check
+
+fin
+
+entre
+
+tourne
+
+check
+
+fin
+
+entre
+
+tourne
+
+fin
+
+---unmap floor ->11
+---unmap floor ->1
+
+free out
+
+malloc
+
+malloc check_free
+
+malloc begin new
+
+malloc check size
+
+malloc begin_new
+
+malloc begin_new2
+
+malloc split_mem
+
+malloc out
+
+free
+
+free 1er if
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free 2eme if
+0
+free else
+
+entre
+
+tourne
+
+check
+
+fin
+
+entre
+
+tourne
+
+check
+
+fin
+
+entre
+
+tourne
+
+fin
+
+---unmap floor ->12
+---unmap floor ->1
+
+free out
+
+malloc
+
+malloc check_free
+
+malloc begin new
+
+malloc check size
+
+malloc begin_new
+
+malloc begin_new2
+
+malloc split_mem
 
 malloc out
 
 malloc
 
+malloc check_free
+
 malloc begin new
+
+malloc check size
+
+malloc begin_new
+
+malloc begin_new2
+
+malloc split_mem
 
 malloc out
 
@@ -851,8 +13261,20 @@ realloc
 c la --->
 malloc
 
-malloc out 3
-10d32a028
+malloc check_free
+
+malloc begin new
+
+malloc check size
+
+malloc begin_new
+
+malloc begin_new2
+
+malloc split_mem
+
+malloc out
+105e54028
 free
 
 free 1er if
@@ -883,15 +13305,72 @@ free next apres
 
 free while
 
-free 2eme if
+free next avant
 
+free next apres
+
+free while
+
+free 2eme if
+0
 free else
 
+entre
+
+tourne
+
+check
+
+fin
+
+entre
+
+tourne
+
+check
+
+fin
+
+entre
+
+tourne
+
+check
+
+fin
+
+entre
+
+tourne
+
+check
+
+fin
+
+entre
+
+tourne
+
+fin
+
+---unmap floor ->15
+---unmap floor ->1
+
 free out
-encore un -->encore un -->encore un -->encore un -->encore un -->encore un -->encore un -->encore un -->encore un -->
+encore un -->encore un -->encore un -->encore un -->
 malloc
 
+malloc check_free
+
 malloc begin new
+
+malloc check size
+
+malloc begin_new
+
+malloc begin_new2
+
+malloc split_mem
 
 malloc out
 
@@ -925,235 +13404,130 @@ free next apres
 
 free while
 
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
 free 2eme if
-
+2
 free 3er if
+
+---unmap floor ->14
 
 realloc out 4
 
-free
-
-free 1er if
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free 2eme if
-
-free 3er if
-
-free
-
-free 1er if
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free 2eme if
-
-free 3er if
-
-malloc
-
-malloc out 3
-
 realloc
 c la --->
 malloc
 
-malloc out 3
+malloc check_free
+
+malloc begin new
+
+malloc check size
+
+malloc begin_new
+
+malloc begin_new2
+
+malloc split_mem
+
+malloc out
+105e51028
+free
+
+free 1er if
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free next avant
+
+free next apres
+
+free while
+
+free 2eme if
 0
-free
-
-free 1er if
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free 2eme if
-
 free else
 
+entre
+
+tourne
+
+check
+
+fin
+
+entre
+
+tourne
+
+check
+
+fin
+
+entre
+
+tourne
+
+check
+
+fin
+
+entre
+
+tourne
+
+check
+
+fin
+
+entre
+
+tourne
+
+fin
+
+---unmap floor ->17
+---unmap floor ->1
+
 free out
-
-realloc out 5
-
+encore un -->encore un -->encore un -->
 malloc
+
+malloc check_free
 
 malloc begin new
 
+malloc check size
+
+malloc begin_new
+
+malloc begin_new2
+
+malloc split_mem
+
 malloc out
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
 
 free
 
@@ -1179,2690 +13553,105 @@ free next apres
 
 free while
 
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
 free 2eme if
-
-free else
-
-free out
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc begin new
-
-malloc out
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-free
-
-free 1er if
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free 2eme if
-
+2
 free 3er if
 
-free
+---unmap floor ->13
 
-free 1er if
+realloc out 4
 
-free while
+lu 40
 
-free next avant
+lu 40
 
-free next apres
+adresse str 0x105e3d028
 
-free while
+nb : 0
 
-free next avant
+adresse ptr 0x105e3d028
 
-free next apres
+adresse str 0x105e40028
 
-free while
+adresse ptr 0x105e51028
 
-free next avant
+adresse str 0x105e51028
 
-free next apres
+adresse str 0x105e51028
 
-free while
+adresse str 0x105e51028
 
-free next avant
+adresse str 0x105e51028
 
-free next apres
+adresse str 0x105e51028
 
-free while
+adresse str 0x105e51028
 
-free next avant
+adresse str 0x105e51028
 
-free next apres
+adresse str 0x105e51028
 
-free while
+adresse str 0x105e51028
 
-free next avant
+adresse str 0x105e51028
 
-free next apres
+adresse ptr 0x105e54028
 
-free while
+adresse 0x105e3d000
 
-free next avant
+list sortie 0x105e3d028
 
-free next apres
+list free 1
+type 2
+floor 1
+size 12000
 
-free while
+adresse 0x105e40000
 
-free 2eme if
+list sortie 0x105e40028
 
-free else
+list free 1
+type 1
+floor 2
+size 250
 
-free out
+adresse 0x105e40122
 
-free
+list sortie 0x105e4014a
 
-free 1er if
+list free 0
+type 1
+floor 2
+size 69246
 
-free while
+adresse 0x105e57000
 
-free next avant
+list sortie 0x105e57028
 
-free next apres
+list free 1
+type 2
+floor 16
+size 8000
 
-free while
+adresse 0x105e54000
 
-free next avant
+list sortie 0x105e54028
 
-free next apres
+list free 1
+type 2
+floor 18
+size 8500
 
-free while
+nobre de tours : 0
 
-free next avant
+size get page 16 / 100 : 655
 
-free next apres
+size get page 4 / 100  : 163
 
-free while
+size get page 16  : 65536
 
-free next avant
+size get page 4  : 16384
 
-free next apres
+size get page 16 + sizeof(t_list) * 100 : 69536
 
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free 2eme if
-
-free else
-
-free out
-
-realloc
-c la --->
-malloc
-
-malloc out 3
-0
-free
-
-free 1er if
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free 2eme if
-
-free else
-
-free out
-
-realloc out 5
-
-malloc
-
-malloc out 3
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-free
-
-free 1er if
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free out of while
-
-free out of while
-
-free out 2
-
-free
-
-free out 2
-
-malloc
-
-malloc start
-
-malloc out
-
-free
-
-free 1er if
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free out of while
-
-free out of while
-
-free out 2
-
-malloc
-
-malloc start
-
-malloc out
-
-free
-
-free 1er if
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free out of while
-
-free out of while
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-malloc
-
-malloc start
-
-malloc out
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-free
-
-free 1er if
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free out of while
-
-free out of while
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-malloc
-
-malloc start
-
-malloc out
-
-free
-
-free 1er if
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free out of while
-
-free out of while
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-malloc
-
-malloc start
-
-malloc out
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-free
-
-free 1er if
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free out of while
-
-free out of while
-
-free out 2
-
-malloc
-
-malloc start
-
-malloc out
-
-free
-
-free 1er if
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free out of while
-
-free out of while
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-malloc
-
-malloc start
-
-malloc out
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free 1er if
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free out of while
-
-free out of while
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-malloc
-
-malloc start
-
-malloc out
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc begin new
-
-malloc out
-
-free
-
-free 1er if
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free out of while
-
-free out of while
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-malloc
-
-malloc start
-
-malloc out
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-malloc
-
-malloc out 3
-
-free
-
-free 1er if
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free out of while
-
-free out of while
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-free
-
-free out 2
-
-realloc
-c la --->
-malloc
-
-malloc start
-
-malloc out
-10d35c028
-free
-
-free 1er if
-
-free while
-
-free 2eme if
-
-free else
-
-free out
-encore un -->encore un -->
-realloc out 2
-
-free
-
-free out 2
-
-realloc
-c la --->
-malloc
-
-malloc start
-
-malloc out
-10d35c054
-free
-
-free 1er if
-
-free while
-
-free 2eme if
-
-free else
-
-free out
-encore un -->encore un -->
-realloc out 2
-
-free
-
-free out 2
-
-malloc
-
-malloc start
-
-malloc out
-
-malloc
-
-malloc begin new
-
-malloc out
-
-free
-
-free 1er if
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free next avant
-
-free next apres
-
-free while
-
-free 2eme if
-
-free else
-
-free out
-
-free
-
-free 1er if
-
-free while
-
-free 2eme if
-
-free else
-
-free out
-
-free
-
-free out 2
+size get page 4 + sizeof(t_list) * 100  : 20384

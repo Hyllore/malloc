@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/22 16:57:28 by droly             #+#    #+#             */
-/*   Updated: 2017/03/30 17:17:33 by droly            ###   ########.fr       */
+/*   Updated: 2017/03/31 17:15:07 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ void		*realloc(void *ptr, size_t size)
 	ft_putstr("\nrealloc\n");
 	tmp = list;
 	ft_putstr("c la --->");
-	showadd(ptr);
+//	showadd(ptr);
 	if (!ptr)
 	{
 		ft_putstr("\nrealloc out 5\n");

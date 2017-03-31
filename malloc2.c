@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/14 14:46:32 by droly             #+#    #+#             */
-/*   Updated: 2017/03/30 18:14:27 by droly            ###   ########.fr       */
+/*   Updated: 2017/03/31 17:27:42 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,47 +32,102 @@ t_list		*split_mem(size_t size, t_list *list, int num)
 
 void		*add_new2(t_list *list, size_t size, t_list *tmp, t_list *tmp2)
 {
+	void	*tmp3;
 	ft_putstr("\nmalloc add_new2`\n");
 	list->isfree = 1;
-//	if (list->size >= (sizeof(t_list) + size + 1))
-//	{
-//		tmp = &list->start[size];
-//		tmp->isfree = 0;
-//		tmp->next = list->next;
-//		tmp->start = &tmp[sizeof(t_list)];
-//		tmp->floor = list->floor;
-//		tmp->type = list->type;
-//		tmp->size = list->size - (sizeof(t_list) + size);
-//		tmp = &list->start[size];
-//		list->next = tmp;
-//		list->size = size;
-//	}
-		ft_putstr("\nmalloc add_new2`fklsrjknv\n");
-	if (size >= list->size)
-	{
-		tmp = 0;
-	}
+	ft_putchar('a');
 	ft_putnbr(size);
+	if (list->size >= (sizeof(t_list) + size + 1))
+	{
+		ft_putchar('b');
+		tmp = &list->start[size];
+		if (!tmp)
+			ft_putstr("\nniquetamer\n");
+		ft_putchar('d');
+		tmp->next = list->next;
+		ft_putchar('e');
+		tmp->start = &tmp[sizeof(t_list)];
+		ft_putchar('f');
+		tmp->floor = list->floor;
+		ft_putchar('g');
+		tmp->type = list->type;
+		ft_putchar('h');
+		tmp->isfree = 0;
+		ft_putchar('c');
+		tmp->size = list->size - (sizeof(t_list) + size);
+		ft_putchar('i');
+//		tmp = &list->start[size];
+		list->next = tmp;
+		ft_putchar('j');
+		list->size = size;
+		ft_putchar('k');
+	}
+		ft_putstr("\nmalloc add_new2`fklsrjknv\n");
+//	if (size >= list->size)
+//	{
+//		tmp = 0;
+//	}
+//	ft_putnbr(size);
 	ft_putstr("\nmalloc add_new2 fin\n");
-	ft_putnbr(list->size);
+//	ft_putnbr(list->size);
 	ft_putstr("\nmalloc add_new2 fin 2\n");
-	list = tmp2;
-	return (list->start);
+		ft_putstr("\nlist->type:");
+			ft_putnbr(list->type);
+		ft_putstr("\nlist->floor:");
+			ft_putnbr(list->floor);
+		ft_putstr("\nlist->isfree:");
+			ft_putnbr(list->isfree);
+		ft_putstr("\nlist->size:");
+			ft_putnbr(list->size);
+		ft_putchar('\n');
+	ft_putstr("\nmalloc add_new2 fin 2\n");
+		ft_putstr("\nlist->next->type:");
+			ft_putnbr(list->next->type);
+		ft_putstr("\nlist->next->floor:");
+			ft_putnbr(list->next->floor);
+		ft_putstr("\nlist->next->isfree:");
+			ft_putnbr(list->next->isfree);
+		ft_putstr("\nlist->next->size:");
+			ft_putnbr(list->next->size);
+		ft_putchar('\n');
+		ft_putstr("\ntmp2->type:");
+			ft_putnbr(tmp2->type);
+		ft_putstr("\ntmp2->floor:");
+			ft_putnbr(tmp2->floor);
+		ft_putstr("\ntmp2->isfree:");
+			ft_putnbr(tmp2->isfree);
+		ft_putstr("\ntmp2->size:");
+			ft_putnbr(tmp2->size);
+		ft_putchar('\n');
+	tmp3 = list->start;
+	tmp2 = list;
+	return (tmp3);
 }
 
 //voir modifs, j'ai modifsdif truc dans add_new2 et segfault dans add new3 mtn , j'ai add tmp2 = list dasn addnew
 
 void		add_new3(t_list *list, size_t size)
 {
+	ft_putnbr(list->size);
+
 	ft_putstr("\nmalloc add_new3\n");
+//	ft_itoa_base_ull(size, 10);
 	list->next = &list->start[size];
+	ft_putstr("\nmalloc add_new3 fin 2\n");
 	list->next->isfree = 0;
+	ft_putstr("\nmalloc add_new3 fin 3\n");
 	list->next->floor = list->floor;
+	ft_putstr("\nmalloc add_new3 fin 4\n");
 	list->next->type = list->type;
+	ft_putstr("\nmalloc add_new3 fin 5\n");
 	list->next->start = &list->start[size + sizeof(t_list)];
+	ft_putstr("\nmalloc add_new3 fin 6\n");
 	list->next->next = NULL;
+	ft_putstr("\nmalloc add_new3 fin 7\n");
 	list->next->size = list->size - (size + sizeof(t_list));
+	ft_putstr("\nmalloc add_new3 fin 8\n");
 	list->size = size;
+	ft_putstr("\nmalloc add_new3 fin 9\n");
 }
 
 void		*add_new(t_list *list, t_list *tmp2, size_t size, void *tmp)
@@ -82,6 +137,15 @@ void		*add_new(t_list *list, t_list *tmp2, size_t size, void *tmp)
 	tmp2 = list;
 	while (list != NULL)
 	{
+		ft_putstr("\nlist->type:");
+			ft_putnbr(list->type);
+		ft_putstr("\nlist->floor:");
+			ft_putnbr(list->floor);
+		ft_putstr("\nlist->isfree:");
+			ft_putnbr(list->isfree);
+		ft_putstr("\nlist->size:");
+			ft_putnbr(list->size);
+		ft_putchar('\n');
 		if (list->isfree == 0 && list->size >= size && list->next != NULL &&
 		(((list->type == 0 && size <= ((unsigned long)(4 * getpagesize()) /
 		100)) || (list->type == 1 && size <= ((unsigned long)(16 *
@@ -94,8 +158,8 @@ void		*add_new(t_list *list, t_list *tmp2, size_t size, void *tmp)
 		((unsigned long)(4 * getpagesize()) / 100)))))
 		{
 			list->isfree = 1;
-			if (list->size >= (sizeof(t_list) + size + 1))
-				add_new3(list, size);
+//			if (list->size >= (sizeof(t_list) + size + 1))
+			add_new3(list, size);
 			tmp = list->start;
 			list = tmp2;
 	ft_putstr("\nmalloc add_new3 fin\n");

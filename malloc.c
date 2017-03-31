@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/20 16:12:30 by droly             #+#    #+#             */
-/*   Updated: 2017/03/30 17:41:15 by droly            ###   ########.fr       */
+/*   Updated: 2017/03/31 17:29:57 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int				check_free(t_list *list, size_t size, t_list *tmp2)
 	ft_putstr("\nmalloc check_free\n");
 	while (list != NULL)
 	{
-		if (list->isfree == 0 && list->size >= size)
+		if (list->isfree == 0 && list->size >= (size + sizeof(t_list) + 1))
 		{
 			if ((list->type == 0 && size <= ((unsigned long)(4 * getpagesize())
 			/ 100)) || (list->type == 1 && size <= (unsigned long)((16 *
@@ -80,18 +80,12 @@ t_list			*check_size(t_list *list, size_t size)
 {
 	ft_putstr("\nmalloc check size\n");
 	if (size <= (unsigned long)((4 * getpagesize()) / 100))
-	{
 		list = begin_new(list, 4, size, 0);
-	}
 	if (size <= (unsigned long)((16 * getpagesize()) / 100) && size >
 			(unsigned long)((4 * getpagesize()) / 100))
-	{
 		list = begin_new(list, 16, size, 1);
-	}
 	if (size > (unsigned long)((16 * getpagesize()) / 100))
-	{
 		list = begin_new(list, size + sizeof(t_list) + 1, size, 2);
-	}
 	return (list);
 }
 
@@ -110,7 +104,7 @@ void			*malloc(size_t size)
 		ft_putstr("\nmalloc out 2\n");
 		return (NULL);
 	}
-	if (list && check_free(list, size, NULL) == 0)
+	if (list && check_free(list, size, list) == 0)
 	{
 		ft_putstr("\nmalloc begin new\n");
 //		write(1, "elo3", 4);
