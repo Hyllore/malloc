@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/20 16:12:30 by droly             #+#    #+#             */
-/*   Updated: 2017/03/31 17:29:57 by droly            ###   ########.fr       */
+/*   Updated: 2017/04/21 17:16:50 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int				check_free(t_list *list, size_t size, t_list *tmp2)
 {
-	ft_putstr("\nmalloc check_free\n");
+//	ft_putstr("\nmalloc check_free\n");
 	while (list != NULL)
 	{
 		if (list->isfree == 0 && list->size >= (size + sizeof(t_list) + 1))
@@ -36,7 +36,7 @@ int				check_free(t_list *list, size_t size, t_list *tmp2)
 
 void			*begin_new2(int num, t_list *tmp)
 {
-	ft_putstr("\nmalloc begin_new2\n");
+//	ft_putstr("\nmalloc begin_new2\n");
 	if (num <= 16)
 	{
 		if ((tmp = mmap(0, ((num * getpagesize()) + (sizeof(t_list) *
@@ -58,7 +58,7 @@ t_list			*begin_new(t_list *list, int num, size_t size, int type)
 	void		*tmp;
 	static int	i = 0;
 
-	ft_putstr("\nmalloc begin_new\n");
+//	ft_putstr("\nmalloc begin_new\n");
 	tmp = begin_new2(num, NULL);
 	list = tmp;
 	list->start = &tmp[sizeof(t_list)];
@@ -78,14 +78,14 @@ t_list			*begin_new(t_list *list, int num, size_t size, int type)
 
 t_list			*check_size(t_list *list, size_t size)
 {
-	ft_putstr("\nmalloc check size\n");
+//	ft_putstr("\nmalloc check size\n");
 	if (size <= (unsigned long)((4 * getpagesize()) / 100))
 		list = begin_new(list, 4, size, 0);
 	if (size <= (unsigned long)((16 * getpagesize()) / 100) && size >
 			(unsigned long)((4 * getpagesize()) / 100))
 		list = begin_new(list, 16, size, 1);
 	if (size > (unsigned long)((16 * getpagesize()) / 100))
-		list = begin_new(list, size + sizeof(t_list) + 1, size, 2);
+		list = begin_new(list, size + sizeof(t_list), size, 2);
 	return (list);
 }
 
@@ -98,15 +98,14 @@ void			*malloc(size_t size)
 //	write(1, "elo", 3);
 //	puts((size + sizeof(t_list)));
 //	printf("%u", size + sizeof(t_list));
-	ft_putstr("\nmalloc\n");
 	if (size > 2147483606)
 	{
-		ft_putstr("\nmalloc out 2\n");
+//		ft_putstr("\nmalloc out 2\n");
 		return (NULL);
 	}
 	if (list && check_free(list, size, list) == 0)
 	{
-		ft_putstr("\nmalloc begin new\n");
+//		ft_putstr("\nmalloc begin new\n");
 //		write(1, "elo3", 4);
 //		printf("1er if : %lu\n", size);
 		tmp3 = list;
@@ -122,12 +121,12 @@ void			*malloc(size_t size)
 	{
 //		write(1, "elo2", 4);
 //		printf("2eme if : %lu\n", size);
-		ft_putstr("\nmalloc out 3\n");
+//		ft_putstr("\nmalloc out 3\n");
 		return (add_new(list, NULL, size, list));
 	}
 	else
 	{
-		ft_putstr("\nmalloc start\n");
+//		ft_putstr("\nmalloc start\n");
 //		write(1, "elo5", 4);
 //		printf("3eme if : %lu\n", size);
 		list = check_size(list, size);
@@ -138,7 +137,7 @@ void			*malloc(size_t size)
 	tmp4 = list->start;
 	list = tmp2;
 //	ft_putstr("hey\n");
-	ft_putstr("\nmalloc out\n");
+//	ft_putstr("\nmalloc out\n");
 //	show_alloc_mem();
 	return (tmp4);
 }
