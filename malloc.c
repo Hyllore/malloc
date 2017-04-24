@@ -6,23 +6,22 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/20 16:12:30 by droly             #+#    #+#             */
-/*   Updated: 2017/04/21 17:16:50 by droly            ###   ########.fr       */
+/*   Updated: 2017/04/24 16:09:41 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "malloc.h"
 
-int				check_free(t_list *list, size_t size, t_list *tmp2)
+int				check_free(t_list *list, size_t size, t_list *tmp2, int page)
 {
-//	ft_putstr("\nmalloc check_free\n");
 	while (list != NULL)
 	{
 		if (list->isfree == 0 && list->size >= (size + sizeof(t_list) + 1))
 		{
-			if ((list->type == 0 && size <= ((unsigned long)(4 * getpagesize())
+			if ((list->type == 0 && size <= ((unsigned long)(4 * page)
 			/ 100)) || (list->type == 1 && size <= (unsigned long)((16 *
-			getpagesize()) / 100) && size > (unsigned long)((4 *
-			getpagesize()) / 100)))
+			page) / 100) && size > (unsigned long)((4 *
+			page) / 100)))
 			{
 				list = tmp2;
 				return (1);
@@ -34,12 +33,11 @@ int				check_free(t_list *list, size_t size, t_list *tmp2)
 	return (0);
 }
 
-void			*begin_new2(int num, t_list *tmp)
+void			*begin_new2(int num, t_list *tmp, int page)
 {
-//	ft_putstr("\nmalloc begin_new2\n");
 	if (num <= 16)
 	{
-		if ((tmp = mmap(0, ((num * getpagesize()) + (sizeof(t_list) *
+		if ((tmp = mmap(0, ((num * page) + (sizeof(t_list) *
 		100)), PROT_READ | PROT_WRITE, MAP_ANON | MAP_PRIVATE, -1, 0)) ==
 				MAP_FAILED)
 			return (NULL);
@@ -57,9 +55,11 @@ t_list			*begin_new(t_list *list, int num, size_t size, int type)
 {
 	void		*tmp;
 	static int	i = 0;
+	static int page = -2;
 
-//	ft_putstr("\nmalloc begin_new\n");
-	tmp = begin_new2(num, NULL);
+	if (page == -2)
+		page = getpagesize();
+	tmp = begin_new2(num, NULL, page);
 	list = tmp;
 	list->start = &tmp[sizeof(t_list)];
 	list = split_mem(size, list, num);
@@ -67,7 +67,7 @@ t_list			*begin_new(t_list *list, int num, size_t size, int type)
 	list->type = type;
 	if (num <= 16)
 	{
-		list->next->size = (((num * getpagesize()) + (sizeof(t_list) * 100))
+		list->next->size = (((num * page) + (sizeof(t_list) * 100))
 				- (size + sizeof(t_list)));
 		list->next->floor = i;
 		list->next->type = type;
@@ -76,15 +76,14 @@ t_list			*begin_new(t_list *list, int num, size_t size, int type)
 	return (list);
 }
 
-t_list			*check_size(t_list *list, size_t size)
+t_list			*check_size(t_list *list, size_t size, int page)
 {
-//	ft_putstr("\nmalloc check size\n");
-	if (size <= (unsigned long)((4 * getpagesize()) / 100))
+	if (size <= (unsigned long)((4 * page) / 100))
 		list = begin_new(list, 4, size, 0);
-	if (size <= (unsigned long)((16 * getpagesize()) / 100) && size >
-			(unsigned long)((4 * getpagesize()) / 100))
+	if (size <= (unsigned long)((16 * page) / 100) && size >
+			(unsigned long)((4 * page) / 100))
 		list = begin_new(list, 16, size, 1);
-	if (size > (unsigned long)((16 * getpagesize()) / 100))
+	if (size > (unsigned long)((16 * page) / 100))
 		list = begin_new(list, size + sizeof(t_list), size, 2);
 	return (list);
 }
@@ -94,50 +93,32 @@ void			*malloc(size_t size)
 	t_list		*tmp2;
 	t_list		*tmp3;
 	void		*tmp4;
+	static int page = -2;
 
-//	write(1, "elo", 3);
-//	puts((size + sizeof(t_list)));
-//	printf("%u", size + sizeof(t_list));
+	if (page == -2)
+		page = getpagesize();
 	if (size > 2147483606)
-	{
-//		ft_putstr("\nmalloc out 2\n");
 		return (NULL);
-	}
-	if (list && check_free(list, size, list) == 0)
+	if (list && check_free(list, size, list, page) == 0)
 	{
-//		ft_putstr("\nmalloc begin new\n");
-//		write(1, "elo3", 4);
-//		printf("1er if : %lu\n", size);
 		tmp3 = list;
-		tmp2 = check_size(NULL, size);
+		tmp2 = check_size(NULL, size, page);
 		while (list->next != NULL)
 			list = list->next;
 		if (list->next == NULL)
 			list->next = tmp2;
 		list = list->next;
-		tmp2 = tmp3;
+		ft_putstr("\nfloor : ");
+		ft_putnbr(list->floor);
 	}
 	else if (list)
-	{
-//		write(1, "elo2", 4);
-//		printf("2eme if : %lu\n", size);
-//		ft_putstr("\nmalloc out 3\n");
-		return (add_new(list, NULL, size, list));
-	}
+		return (add_new(list, page, size, list));
 	else
 	{
-//		ft_putstr("\nmalloc start\n");
-//		write(1, "elo5", 4);
-//		printf("3eme if : %lu\n", size);
-		list = check_size(list, size);
+		list = check_size(list, size, page);
 		tmp2 = list;
 	}
-//	if (list == NULL)
-//		return (NULL);
 	tmp4 = list->start;
 	list = tmp2;
-//	ft_putstr("hey\n");
-//	ft_putstr("\nmalloc out\n");
-//	show_alloc_mem();
 	return (tmp4);
 }
