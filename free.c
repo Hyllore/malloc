@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/14 15:04:08 by droly             #+#    #+#             */
-/*   Updated: 2017/04/24 16:09:15 by droly            ###   ########.fr       */
+/*   Updated: 2017/04/25 15:59:58 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,21 @@ int			check_unmap(t_list *tmp3)
 	return (0);
 }
 
+int			ft_check(t_list *list)
+{
+	t_list *tmp;
+	int check;
+
+	check = 0;
+	tmp = list;
+	while (list != NULL)
+	{
+		if (list->type == 2 && list->isfree == 0)
+			check++;
+		list = list->next;
+	}
+	return (check);
+}
 
 void		free(void *ptr)
 {
@@ -112,15 +127,28 @@ void		free(void *ptr)
 				list->isfree = 0;
 				if (list->type == 2)
 				{
+//					ft_putstr("\n nombre : ");
+//					ft_putnbr(v);
+					if (ft_check(tmp2) <= 1)
+					{
+						ft_putstr("|free|");
+//						v++;
+//						list = tmp2;
+//						ft_putnbr(list->floor);
+						return ;
+					}
+						ft_putstr("|free2|");
+//					v++;
 					tmp3 = list;
 					find_start(list->floor, tmp2);
-					ft_putstr("\nfree list->floor :");
+//					ft_putstr("\nfree list->floor :");
 //					ft_putnbr(list->floor);
 					if ((munmap(tmp3, tmp3->size + sizeof(t_list) + 1)) == -1)
 					{
-						ft_putstr("omg");
+						list->isfree = 1;
 						return ;
 					}
+//					v--;
 					return ;
 				}
 				else if (list->type == 1 || list->type == 0)

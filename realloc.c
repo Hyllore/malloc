@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/22 16:57:28 by droly             #+#    #+#             */
-/*   Updated: 2017/04/24 15:37:27 by droly            ###   ########.fr       */
+/*   Updated: 2017/04/25 16:49:17 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ void		*realloc(void *ptr, size_t size)
 	void	*tmp;
 	void	*tmp2;
 
+	ft_putstr("|realloc|");
 	tmp = NULL;
 	if (!ptr)
 	{

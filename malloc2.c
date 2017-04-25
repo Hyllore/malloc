@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/14 14:46:32 by droly             #+#    #+#             */
-/*   Updated: 2017/04/24 17:59:45 by droly            ###   ########.fr       */
+/*   Updated: 2017/04/25 15:43:42 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,8 @@ void		*add_new(t_list *list, int page, size_t size, void *tmp)
 {
 	t_list *tmp2;
 	tmp2 = list;
+
+//	ft_putstr("encpre hello");
 	while (list != NULL)
 	{
 		if (list->isfree == 0 && list->size >= size && list->next != NULL &&
@@ -84,6 +86,16 @@ void		*add_new(t_list *list, int page, size_t size, void *tmp)
 			add_new3(list, size);
 			tmp = list->start;
 			list = tmp2;
+			return (tmp);
+		}
+		else if (list->isfree == 0 && list->size >= size && list->type == 2
+		&& size > ((unsigned long)(16 * page) / 100))
+		{
+			ft_putstr("|add_new|");
+			list->isfree = 1;
+			tmp = list->start;
+			list = tmp2;
+			ft_putnbr(list->floor);
 			return (tmp);
 		}
 		list = list->next;

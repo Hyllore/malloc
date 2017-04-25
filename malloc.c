@@ -1,3 +1,5 @@
+
+
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -16,14 +18,16 @@ int				check_free(t_list *list, size_t size, t_list *tmp2, int page)
 {
 	while (list != NULL)
 	{
-		if (list->isfree == 0 && list->size >= (size + sizeof(t_list) + 1))
+		if (list->isfree == 0 && ((list->type == 2 && size <= list->size) || list->size >= (size + sizeof(t_list) + 1)))
 		{
 			if ((list->type == 0 && size <= ((unsigned long)(4 * page)
 			/ 100)) || (list->type == 1 && size <= (unsigned long)((16 *
 			page) / 100) && size > (unsigned long)((4 *
-			page) / 100)))
+			page) / 100)) || (list->type == 2 && size > (unsigned long)((16 * page) / 100)))
 			{
+//				ft_putstr("\nwallah\n");
 				list = tmp2;
+//				ft_putstr("\nwallah2\n");
 				return (1);
 			}
 		}
@@ -44,6 +48,7 @@ void			*begin_new2(int num, t_list *tmp, int page)
 	}
 	else
 	{
+//		ft_putstr("\nmmap\n");
 		if ((tmp = mmap(0, num, PROT_READ | PROT_WRITE, MAP_ANON |
 						MAP_PRIVATE, -1, 0)) == MAP_FAILED)
 			return (NULL);
@@ -95,12 +100,14 @@ void			*malloc(size_t size)
 	void		*tmp4;
 	static int page = -2;
 
+	ft_putstr("|malloc|");
 	if (page == -2)
 		page = getpagesize();
 	if (size > 2147483606)
 		return (NULL);
 	if (list && check_free(list, size, list, page) == 0)
 	{
+		ft_putstr("\n|new-mmap|\n");
 		tmp3 = list;
 		tmp2 = check_size(NULL, size, page);
 		while (list->next != NULL)
@@ -108,13 +115,14 @@ void			*malloc(size_t size)
 		if (list->next == NULL)
 			list->next = tmp2;
 		list = list->next;
-		ft_putstr("\nfloor : ");
-		ft_putnbr(list->floor);
+//		ft_putstr("\nfloor : ");
+//		ft_putnbr(list->floor);
 	}
 	else if (list)
 		return (add_new(list, page, size, list));
 	else
 	{
+		ft_putstr("|New-begining|");
 		list = check_size(list, size, page);
 		tmp2 = list;
 	}
