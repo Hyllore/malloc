@@ -39,6 +39,9 @@ int				check_free(t_list *list, size_t size, t_list *tmp2, int page)
 
 void			*begin_new2(int num, t_list *tmp, int page)
 {
+	ft_putstr("|mmap :");
+	ft_putnbr(num);
+	ft_putchar('|');
 	if (num <= 16)
 	{
 		if ((tmp = mmap(0, ((num * page) + (sizeof(t_list) *

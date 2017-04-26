@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/28 10:41:08 by droly             #+#    #+#             */
-/*   Updated: 2017/04/24 11:20:44 by droly            ###   ########.fr       */
+/*   Updated: 2017/04/26 13:52:55 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ char	*ft_itoa_base_ull(unsigned long long value, int base);
 size_t	ft_strlen(const char *s);
 void	ft_bzero(void *s, size_t n);
 void	*calloc(size_t count, size_t size);
+void		*ft_memcpy(void *dst, const void *src, size_t n);
+
 
 void	showadd(void *str);
 
