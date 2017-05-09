@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/22 16:57:28 by droly             #+#    #+#             */
-/*   Updated: 2017/04/26 14:14:49 by droly            ###   ########.fr       */
+/*   Updated: 2017/05/09 16:48:39 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void		*calloc(size_t count, size_t size)
 {
 	void *ptr;
 
-	ft_putstr("|calloc|");
 	if (count == 0 || size == 0)
 		return (NULL);
 	ptr = malloc(count * size);
@@ -31,7 +30,6 @@ void		*realloc(void *ptr, size_t size)
 	void	*tmp;
 	void	*tmp2;
 
-	ft_putstr("|realloc|");
 	if (!ptr)
 	{
 		ptr = malloc(size);
@@ -49,7 +47,6 @@ void		*realloc(void *ptr, size_t size)
 	}
 	if (size != list->size)
 	{
-		ft_putstr("|found realloc|");
 		list = tmp;
 		if ((tmp2 = malloc(size)) == NULL)
 			return (NULL);

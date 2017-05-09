@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/14 14:46:32 by droly             #+#    #+#             */
-/*   Updated: 2017/04/25 15:43:42 by droly            ###   ########.fr       */
+/*   Updated: 2017/05/09 16:47:40 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_list		*split_mem(size_t size, t_list *list, int num)
 	i = 0;
 	list->size = size;
 	list->isfree = 1;
-	if (num <= 16)
+	if (num <= 32)
 	{
 		list->next = &list->start[size];
 		list->next->isfree = 0;
@@ -68,19 +68,18 @@ void		*add_new(t_list *list, int page, size_t size, void *tmp)
 	t_list *tmp2;
 	tmp2 = list;
 
-//	ft_putstr("encpre hello");
 	while (list != NULL)
 	{
 		if (list->isfree == 0 && list->size >= size && list->next != NULL &&
-			(((list->type == 0 && size <= ((unsigned long)(4 * page) /
-			100)) || (list->type == 1 && size <= ((unsigned long)(16 *
-			page) / 100) && size > ((unsigned long)(4 * page) /
-			100))))) 
+			(((list->type == 0 && size <= ((unsigned long)(8 * page) /
+			100)) || (list->type == 1 && size <= ((unsigned long)(32 *
+			page) / 100) && size > ((unsigned long)(8 * page) /
+			100)))))
 			return (add_new2(list, size, NULL, tmp2));
 		else if (list->isfree == 0 && list->size >= size && (((list->type == 0
-		&& size <= ((unsigned long)(4 * page) / 100)) || (list->type
-		== 1 && size <= ((unsigned long)(16 * page) / 100) && size >
-		((unsigned long)(4 * page) / 100)))))
+		&& size <= ((unsigned long)(8 * page) / 100)) || (list->type
+		== 1 && size <= ((unsigned long)(32 * page) / 100) && size >
+		((unsigned long)(8 * page) / 100)))))
 		{
 			list->isfree = 1;
 			add_new3(list, size);
@@ -89,13 +88,11 @@ void		*add_new(t_list *list, int page, size_t size, void *tmp)
 			return (tmp);
 		}
 		else if (list->isfree == 0 && list->size >= size && list->type == 2
-		&& size > ((unsigned long)(16 * page) / 100))
+		&& size > ((unsigned long)(32 * page) / 100))
 		{
-			ft_putstr("|add_new|");
 			list->isfree = 1;
 			tmp = list->start;
 			list = tmp2;
-			ft_putnbr(list->floor);
 			return (tmp);
 		}
 		list = list->next;

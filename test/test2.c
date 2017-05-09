@@ -1,20 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   test2.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: byoung-w <byoung-w@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2014/09/08 14:49:06 by byoung-w          #+#    #+#             */
+/*   Updated: 2014/09/08 14:49:10 by byoung-w         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../malloc.h"
 
-int main()
+int		main(void)
 {
-	int i;
-	char *addr;
+	int			i;
+	char		*addr;
 
 	i = 0;
 	while (i < 1024)
 	{
 		addr = (char*)malloc(1024);
-//		show_alloc_mem();
 		addr[0] = 42;
 		free(addr);
-//		show_alloc_mem();
 		i++;
 	}
-//	show_alloc_mem();
 	return (0);
 }

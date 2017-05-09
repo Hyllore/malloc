@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/14 15:04:08 by droly             #+#    #+#             */
-/*   Updated: 2017/04/25 15:59:58 by droly            ###   ########.fr       */
+/*   Updated: 2017/05/09 16:50:01 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ int			check_unmap(t_list *tmp3)
 		if (check == 0 && tmp3->type == 0 && i >= 10)
 		{
 			find_start(tmp3->floor, tmp2);
-			if (munmap(tmp3, ((4 * page) + (sizeof(t_list) * 100))) == -1)
+			if (munmap(tmp3, ((8 * page) + (sizeof(t_list) * 100))) == -1)
 			{
 				return (0);
 			}
@@ -78,7 +78,7 @@ int			check_unmap(t_list *tmp3)
 		if (check == 0 && tmp3->type == 1 && i >= 10)
 		{
 			find_start(tmp3->floor, tmp2);
-			if (munmap(tmp3, ((16 * page) + (sizeof(t_list) * 100))) == -1)
+			if (munmap(tmp3, ((32 * page) + (sizeof(t_list) * 100))) == -1)
 			{
 				return (0);
 			}
@@ -127,28 +127,15 @@ void		free(void *ptr)
 				list->isfree = 0;
 				if (list->type == 2)
 				{
-//					ft_putstr("\n nombre : ");
-//					ft_putnbr(v);
 					if (ft_check(tmp2) <= 1)
-					{
-						ft_putstr("|free|");
-//						v++;
-//						list = tmp2;
-//						ft_putnbr(list->floor);
 						return ;
-					}
-						ft_putstr("|free2|");
-//					v++;
 					tmp3 = list;
 					find_start(list->floor, tmp2);
-//					ft_putstr("\nfree list->floor :");
-//					ft_putnbr(list->floor);
 					if ((munmap(tmp3, tmp3->size + sizeof(t_list) + 1)) == -1)
 					{
 						list->isfree = 1;
 						return ;
 					}
-//					v--;
 					return ;
 				}
 				else if (list->type == 1 || list->type == 0)

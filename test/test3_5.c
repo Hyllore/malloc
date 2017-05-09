@@ -1,33 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test5.c                                            :+:      :+:    :+:   */
+/*   test3_5.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: byoung-w <byoung-w@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/09/08 14:49:06 by byoung-w          #+#    #+#             */
-/*   Updated: 2017/05/05 14:44:07 by droly            ###   ########.fr       */
+/*   Updated: 2014/09/08 14:49:10 by byoung-w         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../malloc.h"
-/*
-void	ft_putstr(char const *str)
+
+#define M1 (1024 * 1024)
+
+void		print(char *s)
 {
-	while (*str)
-		write(1, str++, 1);
+	write(1, s, strlen(s));
 }
-*/
-int		main(void)
+
+int			main(void)
 {
-	malloc(1024);
-	malloc(1024 * 32);
-	malloc(1024 * 1024);
-	malloc(1024 * 1024 * 16);
-	malloc(1024 * 1024 * 128);
-	ft_putstr("\n---------show_alloc_mem()------------\n");
-	show_alloc_mem();
-	ft_putstr("\n---------show_alloc_mem_ex()---------\n");
-//	show_alloc_mem_ex();
+	char	*addr1;
+	char	*addr2;
+	char	*addr3;
+
+	addr1 = (char *)malloc(16 * M1);
+	strcpy(addr1, "Bonjours\n");
+	print(addr1);
+	addr2 = (char *)malloc(16 * M1);
+	addr3 = (char *)realloc(addr1, 128 * M1);
+	addr3[127 * M1] = 42;
+	print(addr3);
 	return (0);
 }
