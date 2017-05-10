@@ -6,7 +6,7 @@
 #    By: droly <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/02/20 16:01:54 by droly             #+#    #+#              #
-#    Updated: 2017/05/10 17:50:49 by droly            ###   ########.fr        #
+#    Updated: 2017/05/10 18:13:15 by droly            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,8 +35,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@gcc $(FLAGS) $(SRC)
-	@gcc $(FLAG2) $(NAME)
-
+	@gcc $(OBJ) $(FLAGS2) $(NAME)
 clean:
 	@rm -f $(OBJ)
 	@echo "Objects cleaned."
