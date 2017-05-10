@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/22 16:57:28 by droly             #+#    #+#             */
-/*   Updated: 2017/05/09 16:48:39 by droly            ###   ########.fr       */
+/*   Updated: 2017/05/10 17:37:32 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void		*calloc(size_t count, size_t size)
 {
 	void *ptr;
 
-	if (count == 0 || size == 0)
+	if (count == 0 || size == 0 || size > 2147483606)
 		return (NULL);
 	ptr = malloc(count * size);
 	if (ptr == NULL)
@@ -27,9 +27,11 @@ void		*calloc(size_t count, size_t size)
 
 void		*realloc(void *ptr, size_t size)
 {
-	void	*tmp;
+	t_list	*tmp;
 	void	*tmp2;
+	size_t tmpi;
 
+	tmpi = 0;
 	if (!ptr)
 	{
 		ptr = malloc(size);
@@ -47,10 +49,11 @@ void		*realloc(void *ptr, size_t size)
 	}
 	if (size != list->size)
 	{
+		tmpi = list->size;
 		list = tmp;
 		if ((tmp2 = malloc(size)) == NULL)
 			return (NULL);
-		tmp2 = ft_memcpy(tmp2, ptr, size > list->size ? list->size : size);
+		tmp2 = ft_memcpy(tmp2, ptr, size > tmpi ? tmpi : size);
 		free(ptr);
 		return (tmp2);
 	}

@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/14 14:46:32 by droly             #+#    #+#             */
-/*   Updated: 2017/05/09 16:47:40 by droly            ###   ########.fr       */
+/*   Updated: 2017/05/10 10:48:54 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ t_list		*split_mem(size_t size, t_list *list, int num)
 void		*add_new2(t_list *list, size_t size, t_list *tmp, t_list *tmp2)
 {
 	void	*tmp3;
-	list->isfree = 1;
 
+	list->isfree = 1;
 	if (list->size >= (sizeof(t_list) + size + 1))
 	{
 		tmp = &(list->start[size]);
@@ -63,11 +63,23 @@ void		add_new3(t_list *list, size_t size)
 	list->size = size;
 }
 
+t_list		*check_size(t_list *list, size_t size, int page)
+{
+	if (size <= (unsigned long)((8 * page) / 100))
+		list = begin_new(list, 8, size, 0);
+	if (size <= (unsigned long)((32 * page) / 100) && size >
+			(unsigned long)((8 * page) / 100))
+		list = begin_new(list, 32, size, 1);
+	if (size > (unsigned long)((32 * page) / 100))
+		list = begin_new(list, size + sizeof(t_list), size, 2);
+	return (list);
+}
+
 void		*add_new(t_list *list, int page, size_t size, void *tmp)
 {
-	t_list *tmp2;
-	tmp2 = list;
+	t_list	*tmp2;
 
+	tmp2 = list;
 	while (list != NULL)
 	{
 		if (list->isfree == 0 && list->size >= size && list->next != NULL &&

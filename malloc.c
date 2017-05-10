@@ -1,5 +1,3 @@
-
-
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -8,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/20 16:12:30 by droly             #+#    #+#             */
-/*   Updated: 2017/04/24 16:09:41 by droly            ###   ########.fr       */
+/*   Updated: 2017/05/10 16:29:22 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +16,14 @@ int				check_free(t_list *list, size_t size, t_list *tmp2, int page)
 {
 	while (list != NULL)
 	{
-		if (list->isfree == 0 && ((list->type == 2 && size <= list->size) || list->size >= (size + sizeof(t_list) + 1)))
+		if (list->isfree == 0 && ((list->type == 2 && size <= list->size) ||
+					list->size >= (size + sizeof(t_list) + 1)))
 		{
 			if ((list->type == 0 && size <= ((unsigned long)(8 * page)
 			/ 100)) || (list->type == 1 && size <= (unsigned long)((32 *
 			page) / 100) && size > (unsigned long)((8 *
-			page) / 100)) || (list->type == 2 && size > (unsigned long)((32 * page) / 100)))
+			page) / 100)) || (list->type == 2 && size >
+		(unsigned long)((32 * page) / 100)))
 			{
 				list = tmp2;
 				return (1);
@@ -57,7 +57,7 @@ t_list			*begin_new(t_list *list, int num, size_t size, int type)
 {
 	void		*tmp;
 	static int	i = 0;
-	static int page = -2;
+	static int	page = -2;
 
 	if (page == -2)
 		page = getpagesize();
@@ -78,42 +78,38 @@ t_list			*begin_new(t_list *list, int num, size_t size, int type)
 	return (list);
 }
 
-t_list			*check_size(t_list *list, size_t size, int page)
+void			*tmpfunc(size_t size, int page)
 {
-	if (size <= (unsigned long)((8 * page) / 100))
-		list = begin_new(list, 8, size, 0);
-	if (size <= (unsigned long)((32 * page) / 100) && size >
-			(unsigned long)((8 * page) / 100))
-		list = begin_new(list, 32, size, 1);
-	if (size > (unsigned long)((32 * page) / 100))
-		list = begin_new(list, size + sizeof(t_list), size, 2);
-	return (list);
+	void		*tmp4;
+	t_list		*tmp3;
+	t_list		*tmp2;
+
+	tmp2 = list;
+	tmp3 = check_size(NULL, size, page);
+	while (list->next != NULL)
+		list = list->next;
+	if (list->next == NULL)
+		list->next = tmp3;
+	list = list->next;
+	tmp4 = list->start;
+	list = tmp2;
+	return (tmp4);
 }
 
 void			*malloc(size_t size)
 {
 	t_list		*tmp2;
-	t_list		*tmp3;
 	void		*tmp4;
-	static int page = -2;
+	static int	page = -2;
 
+//	ft_putnbr(size);
+//	ft_putchar(':');
 	if (page == -2)
 		page = getpagesize();
-	if (size > 2147483606)
+	if (size > 2147483606 || size <= 0)
 		return (NULL);
 	if (list && check_free(list, size, list, page) == 0)
-	{
-		tmp2 = list;
-		tmp3 = check_size(NULL, size, page);
-		while (list->next != NULL)
-			list = list->next;
-		if (list->next == NULL)
-			list->next = tmp3;
-		list = list->next;
-		tmp4 = list->start;
-		list = tmp2;
-		return (tmp4);
-	}
+		return (tmpfunc(size, page));
 	else if (list)
 		return (add_new(list, page, size, list));
 	else

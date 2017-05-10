@@ -6,40 +6,43 @@
 #    By: droly <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/02/20 16:01:54 by droly             #+#    #+#              #
-#    Updated: 2017/02/20 16:02:44 by droly            ###   ########.fr        #
+#    Updated: 2017/05/10 17:50:49 by droly            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = malloc.so
 
-SRC = 
+SRC = free.c             \
+	  ft_bzero.c         \
+	  malloc.c           \
+	  malloc2.c          \
+	  realloc.c          \
+	  showalloc.c        \
+	  ft_putchar.c       \
+	  ft_putnbr.c        \
+	  ft_putstr.c        \
+	  ft_itoa_base_ull.c \
+	  ft_strlen.c        \
+	  ft_memcpy.c
 
 OBJ = $(SRC:.c=.o)
 
-HEAD = 
+FLAGS = -Wall -Werror -Wextra -c
 
-FLAGS = -Wall -Werror -Wextra -shared -o
+FLAGS2 = -shared -o
 
 all: $(NAME)
 
-$(NAME): $(OBJ) makelibft
-	@gcc $(FLAGS) $(NAME) $(SRC)
-	@gcc $(NAME) libft/libft.a -o $(NAME)
-
-makelibft:
-	@make -C libft/
-	@echo "Library included"
+$(NAME): $(OBJ)
+	@gcc $(FLAGS) $(SRC)
+	@gcc $(FLAG2) $(NAME)
 
 clean:
 	@rm -f $(OBJ)
-	@make -C gnl/ clean
-	@make -C ft_printf/ clean
 	@echo "Objects cleaned."
 
 fclean: clean
 	@rm -f $(NAME)
-	@make -C gnl/ fclean
-	@make -C ft_printf/ fclean
 	@echo "Target cleaned."
 
 re: fclean all
