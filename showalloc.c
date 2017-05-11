@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/27 14:23:24 by droly             #+#    #+#             */
-/*   Updated: 2017/03/31 16:07:31 by droly            ###   ########.fr       */
+/*   Updated: 2017/05/11 10:39:55 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void		begin_type(int type, char *str)
 		ft_putstr("SMALL : 0x");
 	if (type == 2)
 		ft_putstr("LARGE : 0x");
-	str = ft_itoa_base_ull((unsigned long long)list, 16);
+	str = ft_itoa_base_ull((unsigned long long)g_list, 16);
 	ft_putstr(str);
 	free(str);
 	ft_putchar('\n');
@@ -36,15 +36,16 @@ void		begin_type(int type, char *str)
 void		middle_type(char *str)
 {
 	ft_putstr("0x");
-	str = ft_itoa_base_ull((unsigned long long)list->start, 16);
+	str = ft_itoa_base_ull((unsigned long long)g_list->start, 16);
 	ft_putstr(str);
 	free(str);
 	ft_putstr(" - 0x");
-	str = ft_itoa_base_ull((unsigned long long)&list->start[list->size], 16);
+	str = ft_itoa_base_ull((unsigned long long)&g_list->start[g_list->size],
+			16);
 	ft_putstr(str);
 	free(str);
 	ft_putstr(" : ");
-	ft_putnbr(list->size);
+	ft_putnbr(g_list->size);
 	ft_putstr(" octets\n");
 }
 
@@ -57,16 +58,16 @@ void		putintab(t_list *tmp, int type)
 	floor = -1;
 	str = NULL;
 	i = 0;
-	while (list != NULL)
+	while (g_list != NULL)
 	{
-		if (list->type == type && list->floor != floor)
+		if (g_list->type == type && g_list->floor != floor)
 			begin_type(type, str);
-		floor = list->floor;
-		if (list->type == type && list->isfree == 1)
+		floor = g_list->floor;
+		if (g_list->type == type && g_list->isfree == 1)
 			middle_type(str);
-		list = list->next;
+		g_list = g_list->next;
 	}
-	list = tmp;
+	g_list = tmp;
 }
 
 void		show_alloc_mem(void)
@@ -75,7 +76,7 @@ void		show_alloc_mem(void)
 	char	*ans;
 
 	ans = NULL;
-	tmp = list;
+	tmp = g_list;
 	putintab(tmp, 0);
 	putintab(tmp, 1);
 	putintab(tmp, 2);

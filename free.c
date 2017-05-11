@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/14 15:04:08 by droly             #+#    #+#             */
-/*   Updated: 2017/05/09 18:29:14 by droly            ###   ########.fr       */
+/*   Updated: 2017/05/11 11:58:00 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,95 +16,102 @@ int			find_start(int floor, t_list *tmp2)
 {
 	t_list	*tmp3;
 
-	list = tmp2;
-	if (list->floor == floor)
+	g_list = tmp2;
+	if (g_list->floor == floor)
 	{
-		while (list != NULL && list->floor == floor)
-			list = list->next;
+		while (g_list != NULL && g_list->floor == floor)
+			g_list = g_list->next;
 		return (1);
 	}
-	while (list != NULL && list->next->floor != floor)
-		list = list->next;
-	tmp3 = list->next;
+	while (g_list != NULL && g_list->next->floor != floor)
+		g_list = g_list->next;
+	tmp3 = g_list->next;
 	while (tmp3 != NULL && tmp3->floor == floor)
 		tmp3 = tmp3->next;
-	list->next = tmp3;
-	list = tmp2;
+	g_list->next = tmp3;
+	g_list = tmp2;
 	return (0);
+}
+
+int		check_unmap2(t_list *tmp3, int floor, t_list *tmp2, int page)
+{
+	int i;
+	int i2;
+	int check;
+
+	i = 0;
+	i2 = 0;
+	check = 0;
+	floor = g_list->floor;
+	tmp3 = g_list;
+	while (g_list->next != NULL && floor == g_list->floor)
+	{
+		if (g_list->isfree == 1)
+		{
+			check = 1;
+			while (g_list->next != NULL && g_list->floor == floor)
+				g_list = g_list->next;
+		}
+		if (check == 0)
+			g_list = g_list->next;
+		i++;
+	}
+	if (g_list->isfree == 1 && g_list->floor == floor)
+		check = 1;
+	if (check == 0 && tmp3->type == 0 && i >= 10)
+	{
+		find_start(tmp3->floor, tmp2);
+		if (munmap(tmp3, ((8 * page) + (sizeof(t_list) * 100))) == -1)
+		{
+			return (0);
+		}
+		return (i2);
+	}
+	if (check == 0 && tmp3->type == 1 && i >= 10)
+	{
+		find_start(tmp3->floor, tmp2);
+		if (munmap(tmp3, ((32 * page) + (sizeof(t_list) * 100))) == -1)
+		{
+			return (0);
+		}
+		return (i2);
+	}
+	check = 0;
+	if (i == 0)
+		g_list = g_list->next;
+	i = 0;
+	return (1);
 }
 
 int			check_unmap(t_list *tmp3)
 {
-	int		check;
-	int		floor;
-	int		i;
-	int		i2;
 	t_list	*tmp2;
 	static int page = -2;
 
-	i2 = 0;
-	tmp2 = list;
-	i = 0;
-	check = 0;
+	tmp2 = g_list;
 	if (page == -2)
 		page = getpagesize();
-	while (list != NULL)
+	while (g_list != NULL)
 	{
-		floor = list->floor;
-		tmp3 = list;
-		while (list->next != NULL && floor == list->floor)
-		{
-			if (list->isfree == 1)
-			{
-				check = 1;
-				while (list->next != NULL && list->floor == floor)
-					list = list->next;
-			}
-			if (check == 0)
-				list = list->next;
-			i++;
-		}
-		if (list->isfree == 1 && list->floor == floor)
-			check = 1;
-		if (check == 0 && tmp3->type == 0 && i >= 10)
-		{
-			find_start(tmp3->floor, tmp2);
-			if (munmap(tmp3, ((8 * page) + (sizeof(t_list) * 100))) == -1)
-			{
-				return (0);
-			}
-			return (i2);
-		}
-		if (check == 0 && tmp3->type == 1 && i >= 10)
-		{
-			find_start(tmp3->floor, tmp2);
-			if (munmap(tmp3, ((32 * page) + (sizeof(t_list) * 100))) == -1)
-			{
-				return (0);
-			}
-			return (i2);
-		}
-		check = 0;
-		if (i == 0)
-			list = list->next;
-		i = 0;
+		if (check_unmap2(tmp3, 0, tmp2, page) == 0)
+			return (0);
 	}
-	list = tmp2;
+	g_list = tmp2;
 	return (0);
 }
 
-int			ft_check(t_list *list)
+int			ft_check(t_list *g_list)
 {
 	t_list *tmp;
 	int check;
 
 	check = 0;
-	tmp = list;
-	while (list != NULL)
+	tmp = g_list;
+	while (g_list != NULL)
 	{
-		if (list->type == 2 && list->isfree == 0)
+		if (g_list->type == 2 && g_list->isfree == 0)
 			check++;
-		list = list->next;
+		g_list = g_list->next;
 	}
 	return (check);
 }
@@ -117,38 +124,38 @@ void		free(void *ptr)
 
 	i = 0;
 	tmp3 = NULL;
-	tmp2 = list;
-	if (list && ptr)
+	tmp2 = g_list;
+	if (g_list && ptr)
 	{
-		while (list != NULL)
+		while (g_list != NULL)
 		{
-			if (list->start == ptr)
+			if (g_list->start == ptr)
 			{
-				list->isfree = 0;
-				if (list->type == 2)
+				g_list->isfree = 0;
+				if (g_list->type == 2)
 				{
 					if (ft_check(tmp2) <= 1)
 						return ;
-					tmp3 = list;
-					find_start(list->floor, tmp2);
+					tmp3 = g_list;
+					find_start(g_list->floor, tmp2);
 					if ((munmap(tmp3, tmp3->size + sizeof(t_list) + 1)) == -1)
 					{
-						list->isfree = 1;
+						g_list->isfree = 1;
 						return ;
 					}
 					return ;
 				}
-				else if (list->type == 1 || list->type == 0)
+				else if (g_list->type == 1 || g_list->type == 0)
 				{
-					list = tmp2;
+					g_list = tmp2;
 					check_unmap(NULL);
 					return ;
 				}
-				list = tmp2;
+				g_list = tmp2;
 				return ;
 			}
-			list = list->next;
+			g_list = g_list->next;
 		}
 	}
-	list = tmp2;
+	g_list = tmp2;
 }
