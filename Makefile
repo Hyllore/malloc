@@ -6,11 +6,15 @@
 #    By: droly <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/02/20 16:01:54 by droly             #+#    #+#              #
-#    Updated: 2017/05/11 10:03:56 by droly            ###   ########.fr        #
+#    Updated: 2017/05/11 14:41:28 by droly            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = malloc.so
+ifeq ($(HOSTTYPE),)
+	HOSTTYPE := $(shell uname -m)_$(shell uname -s)
+endif
+
+NAME = libft_malloc_$(HOSTTYPE).so
 
 SRC = free.c             \
 	  ft_bzero.c         \
@@ -24,6 +28,7 @@ SRC = free.c             \
 	  ft_itoa_base_ull.c \
 	  ft_memcpy.c
 
+
 OBJ = $(SRC:.c=.o)
 
 FLAGS = -Wall -Werror -Wextra -c
@@ -35,12 +40,16 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	@gcc $(FLAGS) $(SRC)
 	@gcc $(OBJ) $(FLAGS2) $(NAME)
+	@rm -f libft_malloc.so
+	@ln -s $(NAME) libft_malloc.so
+
 clean:
 	@rm -f $(OBJ)
 	@echo "Objects cleaned."
 
 fclean: clean
 	@rm -f $(NAME)
+	@rm -f libft_malloc.so
 	@echo "Target cleaned."
 
 re: fclean all
