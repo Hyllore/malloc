@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/27 14:23:24 by droly             #+#    #+#             */
-/*   Updated: 2017/05/11 10:39:55 by droly            ###   ########.fr       */
+/*   Updated: 2017/05/12 14:38:37 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,9 +73,7 @@ void		putintab(t_list *tmp, int type)
 void		show_alloc_mem(void)
 {
 	t_list	*tmp;
-	char	*ans;
 
-	ans = NULL;
 	tmp = g_list;
 	putintab(tmp, 0);
 	putintab(tmp, 1);

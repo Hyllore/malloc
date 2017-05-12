@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/14 15:04:08 by droly             #+#    #+#             */
-/*   Updated: 2017/05/11 18:20:24 by droly            ###   ########.fr       */
+/*   Updated: 2017/05/12 15:42:58 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,24 +33,25 @@ int				find_start(int floor, t_list *tmp2)
 	return (0);
 }
 
-int			check_unmap3(int check, int i, int floor, t_list *tmp2, int page)
+int				check_unmap3(int check, int i, int floor[static 2],
+		t_list *tmp2)
 {
-	t_list *tmp3;
+	t_list		*tmp3;
 
 	tmp3 = tmp2;
-	if (g_list->isfree == 1 && g_list->floor == floor)
+	if (g_list->isfree == 1 && g_list->floor == floor[0])
 		check = 1;
 	if (check == 0 && tmp3->type == 0 && i >= 10)
 	{
 		find_start(tmp3->floor, tmp2);
-		if (munmap(tmp3, ((8 * page) + (sizeof(t_list) * 100))) == -1)
+		if (munmap(tmp3, ((8 * floor[1]) + (sizeof(t_list) * 100))) == -1)
 			return (0);
 		return (0);
 	}
 	if (check == 0 && tmp3->type == 1 && i >= 10)
 	{
 		find_start(tmp3->floor, tmp2);
-		if (munmap(tmp3, ((32 * page) + (sizeof(t_list) * 100))) == -1)
+		if (munmap(tmp3, ((32 * floor[1]) + (sizeof(t_list) * 100))) == -1)
 			return (0);
 		return (0);
 	}
@@ -64,7 +65,6 @@ int				check_unmap2(t_list *tmp3, int floor, t_list *tmp2, int page)
 
 	i = 0;
 	check = 0;
-	floor = g_list->floor;
 	tmp3 = g_list;
 	while (g_list->next != NULL && floor == g_list->floor)
 	{
@@ -78,48 +78,13 @@ int				check_unmap2(t_list *tmp3, int floor, t_list *tmp2, int page)
 			g_list = g_list->next;
 		i++;
 	}
-	if (check_unmap3(check, i, floor, tmp2, page) == 0)
+	if (check_unmap3(check, i, ((int[2]){floor, page}), tmp2) == 0)
 		return (0);
 	check = 0;
 	if (i == 0)
 		g_list = g_list->next;
 	i = 0;
 	return (1);
-}
-
-//split cette fonction et c good
-
-int				check_unmap(t_list *tmp3)
-{
-	t_list		*tmp2;
-	static int	page = -2;
-
-	tmp2 = g_list;
-	if (page == -2)
-		page = getpagesize();
-	while (g_list != NULL)
-	{
-		if (check_unmap2(tmp3, 0, tmp2, page) == 0)
-			return (0);
-	}
-	g_list = tmp2;
-	return (0);
-}
-
-int				ft_check(t_list *g_list)
-{
-	t_list		*tmp;
-	int			check;
-
-	check = 0;
-	tmp = g_list;
-	while (g_list != NULL)
-	{
-		if (g_list->type == 2 && g_list->isfree == 0)
-			check++;
-		g_list = g_list->next;
-	}
-	return (check);
 }
 
 int				free2(void *ptr, t_list *tmp3, t_list *tmp2)
@@ -158,7 +123,7 @@ void			free(void *ptr)
 	{
 		while (g_list != NULL)
 		{
-			if (free2(ptr, NULL, g_list) == 1)
+			if (free2(ptr, NULL, tmp2) == 1)
 				return ;
 			g_list = g_list->next;
 		}

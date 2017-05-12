@@ -6,7 +6,7 @@
 #    By: droly <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/02/20 16:01:54 by droly             #+#    #+#              #
-#    Updated: 2017/05/11 14:41:28 by droly            ###   ########.fr        #
+#    Updated: 2017/05/12 15:39:27 by droly            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ endif
 NAME = libft_malloc_$(HOSTTYPE).so
 
 SRC = free.c             \
+	  free2.c            \
 	  ft_bzero.c         \
 	  malloc.c           \
 	  malloc2.c          \

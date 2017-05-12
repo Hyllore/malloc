@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/28 10:41:08 by droly             #+#    #+#             */
-/*   Updated: 2017/05/11 15:22:36 by droly            ###   ########.fr       */
+/*   Updated: 2017/05/12 15:39:10 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,9 @@ void				ft_bzero(void *s, size_t n);
 void				*calloc(size_t count, size_t size);
 void				*ft_memcpy(void *dst, const void *src, size_t n);
 void				showadd(void *str);
+int					check_unmap2(t_list *tmp3, int floor, t_list *tmp2,
+		int page);
+int					check_unmap(t_list *tmp3);
+int					ft_check(t_list *g_list);
 
 #endif
